@@ -718,7 +718,7 @@
   <!-- FIN SECCION 5                              -->
   <!-- ========================================== -->
 
-  <!-- ========================================== -->
+ <!-- ========================================== -->
   <!-- SECCION 6                                  -->
   <!-- ========================================== -->
   <section class="w-full bg-white py-20 lg:py-28 px-6 lg:px-16">
@@ -739,24 +739,26 @@
         </h2>
       </div>
 
-      <!-- GRID PRINCIPAL (IMAGEN IZQUIERDA + CONTENIDO DERECHA) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- GRID PRINCIPAL (IMAGEN RETRATO + CONTENIDO ALINEADO) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
         
-        <!-- COLUMNA IZQUIERDA: IMAGEN CON BORDES REDONDEADOS -->
-        <div class="lg:col-span-6 w-full h-[450px] sm:h-[540px] rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100">
-          <img src="assets/6.jpeg" alt="Experiencia y respaldo en cada ensayo" class="w-full h-full object-cover">
+        <!-- COLUMNA IZQUIERDA: IMAGEN VERTICAL (NO ENSANCHADA, COMPLETA A LO ALTO) -->
+        <div class="lg:col-span-5 w-full flex justify-center">
+          <div class="w-full max-w-[430px] lg:max-w-none h-[520px] sm:h-[600px] lg:h-[630px] rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-100">
+            <img src="assets/6.jpeg" alt="Experiencia y respaldo en cada ensayo" class="w-full h-full object-cover object-center">
+          </div>
         </div>
 
-        <!-- COLUMNA DERECHA: SUBTÍTULO Y CARACTERÍSTICAS -->
-        <div class="lg:col-span-6 flex flex-col justify-center space-y-6 lg:pl-4">
+        <!-- COLUMNA DERECHA: SUBTÍTULO Y ELEMENTOS ALINEADOS -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-3">
           
-          <!-- SUBTÍTULO -->
-          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug mb-2">
+          <!-- SUBTÍTULO ALINEADO -->
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug px-6 mb-2">
             Experiencia y respaldo en cada ensayo
           </h3>
 
-          <!-- ELEMENTO 1: RESULTADOS CONFIABLES -->
-          <div class="flex items-start gap-5">
+          <!-- ELEMENTO 1: RESULTADOS CONFIABLES (MISMA ALINEACIÓN) -->
+          <div class="p-6 rounded-2xl flex items-start gap-5">
             <div class="shrink-0 mt-1">
               <!-- Ícono Fábrica Industrial -->
               <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
@@ -779,10 +781,10 @@
             </div>
           </div>
 
-          <!-- ELEMENTO 2: PERSONAL ESPECIALIZADO (TARJETA GRIS RESALTADA) -->
-          <div class="bg-[#f8f9fa] rounded-2xl p-6 sm:p-7 flex items-start gap-5 border border-slate-100/80 shadow-xs">
+          <!-- ELEMENTO 2: PERSONAL ESPECIALIZADO (TARJETA GRIS CON ÍCONO ALINEADO) -->
+          <div class="bg-[#f8f9fa] rounded-2xl p-6 flex items-start gap-5 border border-slate-100 shadow-xs">
             <div class="shrink-0 mt-1">
-              <!-- Ícono Careta / Visor de Protección -->
+              <!-- Ícono Careta / Visor -->
               <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
                 <rect x="22" y="14" width="20" height="6" rx="2" />
                 <path d="M18 20h28c0 0 2 16-3 24s-11 8-11 8-6 0-11-8-3-24-3-24z" />
@@ -799,10 +801,10 @@
             </div>
           </div>
 
-          <!-- ELEMENTO 3: ATENCIÓN EN LABORATORIO Y CAMPO -->
-          <div class="flex items-start gap-5">
+          <!-- ELEMENTO 3: ATENCIÓN EN LABORATORIO Y CAMPO (MISMA ALINEACIÓN) -->
+          <div class="p-6 rounded-2xl flex items-start gap-5">
             <div class="shrink-0 mt-1">
-              <!-- Ícono Multímetro / Equipo de Medición -->
+              <!-- Ícono Multímetro -->
               <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
                 <rect x="18" y="14" width="28" height="38" rx="4" />
                 <rect x="23" y="19" width="18" height="9" rx="1" />
