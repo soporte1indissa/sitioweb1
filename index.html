@@ -69,10 +69,11 @@
   <!-- ========================================== -->
   <!-- BLOQUE 1: HERO CON IMAGEN DE FONDO         -->
   <!-- ========================================== -->
-  <section class="relative w-full min-h-[85vh] bg-cover bg-center flex items-center py-12 px-6 lg:px-16" style="background-image: url('assets/1.jpg');">
+  <section class="relative w-full min-h-[85vh] bg-cover bg-center flex items-center py-12 px-6 lg:px-16" style="background-image: url('assets/1.jpeg');">
     
-    <!-- CAPA NARANJA SEMITRANSPARENTE (OVERLAY) -->
-    <div class="absolute inset-0 bg-testing-orange/75"></div>
+    <!-- OVERLAY ANARANJADO CON COMBINACIÓN MULTIPLY/OVERLAY IGUAL A LA GUÍA -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#e05d06]/85 via-[#e05d06]/80 to-[#e05d06]/75 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-[#e05d06]/40"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto w-full flex flex-col justify-between h-full space-y-12 lg:space-y-16">
       
@@ -86,14 +87,16 @@
       <!-- CONTENEDOR DE TARJETAS FLOTANTES Y DETALLES -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
         
-        <!-- PRIMERA TARJETA BLANCA (CON ANIMACIÓN DE CONTADOR DE 0 A 150) -->
+        <!-- PRIMERA TARJETA BLANCA (ANIMACIÓN DE 0 A 150 EN 2 SEGUNDOS CON "+" FIJO) -->
         <div class="lg:col-span-5 bg-white p-5 rounded-3xl shadow-2xl flex items-center gap-4">
           <div class="w-1/2 h-44 rounded-2xl overflow-hidden shrink-0">
-            <img src="assets/2.jpg" alt="Ensayos de laboratorio" class="w-full h-full object-cover">
+            <img src="assets/2.jpeg" alt="Ensayos de laboratorio" class="w-full h-full object-cover">
           </div>
           <div class="w-1/2 pr-2">
-            <div class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-none mb-1" id="counter">0</div>
-            <div class="text-2xl font-bold text-slate-900 mb-2">+</div>
+            <div class="flex items-baseline font-extrabold text-slate-900 tracking-tight mb-2">
+              <span class="text-4xl sm:text-5xl" id="counter">0</span>
+              <span class="text-3xl sm:text-4xl text-slate-900 ml-1">+</span>
+            </div>
             <p class="text-xs font-semibold text-slate-700 leading-tight">
               Ensayos realizados en laboratorio y campo para proyectos de construccion.
             </p>
@@ -103,7 +106,7 @@
         <!-- SEGUNDA TARJETA BLANCA -->
         <div class="lg:col-span-4 bg-white p-5 rounded-3xl shadow-2xl flex items-center gap-4">
           <div class="w-1/2 h-44 rounded-2xl overflow-hidden shrink-0">
-            <img src="assets/3.jpg" alt="Laboratorio especializado" class="w-full h-full object-cover">
+            <img src="assets/3.jpeg" alt="Laboratorio especializado" class="w-full h-full object-cover">
           </div>
           <div class="w-1/2 pr-2">
             <p class="text-xs font-semibold text-slate-700 leading-tight">
@@ -141,9 +144,9 @@
     </div>
   </footer>
 
-  <!-- SCRIPT PARA EL MENÚ MÓVIL Y LA ANIMACIÓN DEL CONTADOR (4 SEGUNDOS) -->
+  <!-- SCRIPT MENÚ MÓVIL Y CONTADOR AUTOMÁTICO DE 2 SEGUNDOS -->
   <script>
-    // Lógica del menú móvil
+    // Menú móvil
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     if (btn && menu) {
@@ -152,11 +155,11 @@
       });
     }
 
-    // Animación del contador de 0 a 150 en 4000ms (4 segundos)
+    // Animación de contador (0 a 150 en 2000 ms)
     document.addEventListener('DOMContentLoaded', () => {
       const counterElement = document.getElementById('counter');
       const targetValue = 150;
-      const duration = 4000; // 4 segundos en milisegundos
+      const duration = 2000; // 2 segundos
       const startTime = performance.now();
 
       function updateCounter(currentTime) {
