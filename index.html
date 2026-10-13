@@ -1193,20 +1193,7 @@
   <!-- ========================================== -->
   <!-- PIE DE PÁGINA                              -->
   <!-- ========================================== -->
- <script>
-  // Cargar el footer dinámicamente
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch("footer.html")
-      .then(response => {
-        if (!response.ok) throw new Error("Error al cargar el footer");
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById("footer-container").innerHTML = data;
-      })
-      .catch(error => console.error("Error:", error));
-  });
-</script>
+ <div id="footer-container"></div>
 
   <!-- ========================================== -->
   <!-- SCRIPTS (MENÚ MÓVIL Y ANIMACIÓN 2 SEG)     -->
@@ -1245,5 +1232,16 @@
       requestAnimationFrame(updateCounter);
     });
   </script>
+  <script>
+  fetch('./footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Error al cargar footer');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    })
+    .catch(err => console.error('Detalle:', err));
+</script>
 </body>
 </html>
