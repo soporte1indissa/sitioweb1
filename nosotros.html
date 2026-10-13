@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Testing | Laboratorio de Suelos, Concreto y Materiales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .bg-testing-orange { background-color: #e05d06; }
+    .text-testing-orange { color: #e05d06; }
+    .border-testing-orange { border-color: #e05d06; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- NAVBAR / ENCABEZADO (IDÉNTICO)             -->
+  <!-- ========================================== -->
+  <header class="bg-white text-slate-800 shadow-sm sticky top-0 z-50 py-4 px-6 lg:px-12 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo.jpeg" alt="Testing - Suelos, Concreto, Materiales" class="h-12 w-auto object-contain">
+      </a>
+
+      <!-- MENÚ DESKTOP -->
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-800 text-base">
+        <a href="index.html" class="hover:text-testing-orange transition-colors">Inicio</a>
+        <a href="nosotros.html" class="text-testing-orange font-bold transition-colors">Nosotros</a>
+        <a href="servicios.html" class="hover:text-testing-orange transition-colors">Servicios</a>
+        <a href="proyectos.html" class="hover:text-testing-orange transition-colors">Proyectos</a>
+        <a href="contacto.html" class="hover:text-testing-orange transition-colors">Contacto</a>
+      </nav>
+
+      <!-- BOTÓN COTIZACIONES -->
+      <div class="hidden lg:block">
+        <a href="contacto.html" class="bg-testing-orange hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-lg inline-flex items-center gap-3 transition-colors shadow-sm">
+          <span>Cotizaciones</span>
+          <span class="w-5 h-5 rounded-full bg-white text-testing-orange text-xs flex items-center justify-center font-black">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- BOTÓN MÓVIL -->
+      <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white text-slate-800 mt-3 p-4 rounded-xl border border-slate-200 shadow-lg space-y-3">
+      <a href="index.html" class="block font-semibold py-1 hover:text-testing-orange">Inicio</a>
+      <a href="nosotros.html" class="block font-bold py-1 text-testing-orange">Nosotros</a>
+      <a href="servicios.html" class="block font-semibold py-1 hover:text-testing-orange">Servicios</a>
+      <a href="proyectos.html" class="block font-semibold py-1 hover:text-testing-orange">Proyectos</a>
+      <a href="contacto.html" class="block font-semibold py-1 hover:text-testing-orange">Contacto</a>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-testing-orange text-white font-bold px-4 py-2.5 rounded-lg w-full justify-center mt-2">
+        <span>Cotizaciones</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO INTERNO: CABECERA INSTITUCIONAL       -->
+  <!-- ========================================== -->
+  <section class="relative w-full bg-slate-900 py-20 px-6 lg:px-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/1.jpeg" alt="Testing Laboratorio" class="w-full h-full object-cover object-center opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-[#e05d06]/40"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="inline-flex items-center gap-2 text-white/80 font-bold text-xs uppercase tracking-widest mb-4">
+        <a href="index.html" class="hover:text-testing-orange transition-colors">Inicio</a>
+        <span>/</span>
+        <span class="text-testing-orange">Nosotros</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl">
+        Conoce más sobre TESTING
+      </h1>
+      <p class="text-slate-300 text-lg sm:text-xl font-medium mt-4 max-w-2xl leading-relaxed">
+        Compromiso, precisión técnica y respaldo analítico para cada etapa de tu proyecto de construcción.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- BLOQUE: QUIÉNES SOMOS & TRAYECTORIA        -->
+  <!-- ========================================== -->
+  <section class="w-full bg-white py-20 px-6 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- TEXTO EDITORIAL -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest">
+            <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
+            </svg>
+            <span class="tracking-wider">TRAYECTORIA Y CAPACIDAD</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+            Laboratorio especializado en control de calidad y ensayos de materiales
+          </h2>
+
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Desde 2021 brindamos servicios de laboratorio y campo a nivel nacional, proporcionando resultados confiables para apoyar la evaluación y toma de decisiones en proyectos de construcción.
+          </p>
+
+          <p class="text-slate-500 text-sm sm:text-base leading-relaxed">
+            Contamos con personal capacitado y equipo calibrado para ejecutar ensayos con base en normativas y procedimientos técnicos vigentes. Nuestro enfoque asegura que ingenieros, constructores y desarrolladores dispongan de datos precisos en tiempo oportuno para validar la calidad de sus obras.
+          </p>
+
+          <!-- MINI PUNT
