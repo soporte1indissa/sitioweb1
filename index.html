@@ -3,160 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mavron - Construyendo el Futuro de la Innovación Industrial</title>
+  <title>Testing - Suelos, Concreto, Materiales</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Estilos exactos para coincidir con la muestra de Mavron */
-    .bg-mavron-orange {
-      background-color: #ff4800;
+    /* Estilos personalizados para los colores de Testing */
+    .bg-testing-orange {
+      background-color: #e05d06;
     }
-    .text-mavron-orange {
-      color: #ff4800;
+    .text-testing-orange {
+      color: #e05d06;
     }
-    .watermark-text {
-      font-size: clamp(4rem, 12vw, 11rem);
-      font-weight: 900;
-      line-height: 0.85;
-      color: rgba(0, 0, 0, 0.12);
-      pointer-events: none;
-      user-select: none;
+    .border-testing-orange {
+      border-color: #e05d06;
     }
   </style>
 </head>
-<body class="bg-mavron-orange font-sans text-white antialiased selection:bg-black selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- ENCABEZADO / NAVBAR -->
-  <header class="w-full pt-6 pb-4 px-6 lg:px-16 z-30">
+  <!-- ========================================== -->
+  <!-- INICIO DEL NAVBAR / ENCABEZADO             -->
+  <!-- ========================================== -->
+  <header class="bg-white text-slate-800 shadow-sm sticky top-0 z-50 py-4 px-6 lg:px-12 border-b border-slate-100">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
-      <!-- LOGO MAVRON EXACTO -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="flex gap-1 items-center">
-          <span class="w-2.5 h-7 bg-black transform -skew-x-12 rounded-xs"></span>
-          <span class="w-2.5 h-7 bg-black transform -skew-x-12 rounded-xs"></span>
-          <span class="w-2.5 h-7 bg-black transform -skew-x-12 rounded-xs"></span>
-        </div>
-        <span class="text-3xl lg:text-4xl font-extrabold tracking-tight text-white">Mavron</span>
+      <!-- LOGO DENTRO DEL NAVBAR -->
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo.jpeg" alt="Testing - Suelos, Concreto, Materiales" class="h-12 w-auto object-contain">
       </a>
 
       <!-- MENÚ DE NAVEGACIÓN DESKTOP -->
-      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-base text-white">
-        <a href="index.html" class="hover:text-black transition-colors py-1 border-b-2 border-white">Inicio</a>
-        <a href="nosotros.html" class="hover:text-black transition-colors py-1">Nosotros</a>
-        <a href="servicios.html" class="hover:text-black transition-colors py-1">Servicios</a>
-        <a href="proyectos.html" class="hover:text-black transition-colors py-1">Proyectos</a>
-        <a href="contacto.html" class="hover:text-black transition-colors py-1">Contacto</a>
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-800 text-base">
+        <a href="index.html" class="text-testing-orange font-bold transition-colors">Inicio</a>
+        <a href="nosotros.html" class="hover:text-testing-orange transition-colors">Nosotros</a>
+        <a href="servicios.html" class="hover:text-testing-orange transition-colors">Servicios</a>
+        <a href="proyectos.html" class="hover:text-testing-orange transition-colors">Proyectos</a>
+        <a href="contacto.html" class="hover:text-testing-orange transition-colors">Contacto</a>
       </nav>
 
-      <!-- BOTÓN "COTIZAR AHORA" -->
+      <!-- BOTÓN COTIZACIONES -->
       <div class="hidden lg:block">
-        <a href="contacto.html" class="bg-black text-white hover:bg-slate-900 font-bold px-6 py-3.5 rounded-xl inline-flex items-center gap-3 transition-all transform hover:scale-105 shadow-md">
-          <span>Cotizar Ahora</span>
-          <span class="w-6 h-6 rounded-full bg-white text-black text-xs flex items-center justify-center font-black">
-            <i class="fa-solid font-black fa-arrow-right"></i>
+        <a href="contacto.html" class="bg-testing-orange hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-lg inline-flex items-center gap-3 transition-colors shadow-sm">
+          <span>Cotizaciones</span>
+          <span class="w-5 h-5 rounded-full bg-white text-testing-orange text-xs flex items-center justify-center font-black">
+            <i class="fa-solid fa-chevron-right"></i>
           </span>
         </a>
       </div>
 
       <!-- BOTÓN MENÚ MÓVIL -->
-      <button id="menu-btn" class="lg:hidden text-black focus:outline-none p-2">
-        <i class="fa-solid fa-bars text-3xl text-white"></i>
+      <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
     </div>
 
-    <!-- MENÚ DESPLEGABLE MÓVIL -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-black text-white mt-4 p-6 rounded-2xl shadow-xl space-y-4">
-      <a href="index.html" class="block font-bold text-lg text-mavron-orange">Inicio</a>
-      <a href="nosotros.html" class="block font-semibold hover:text-mavron-orange">Nosotros</a>
-      <a href="servicios.html" class="block font-semibold hover:text-mavron-orange">Servicios</a>
-      <a href="proyectos.html" class="block font-semibold hover:text-mavron-orange">Proyectos</a>
-      <a href="contacto.html" class="block font-semibold hover:text-mavron-orange">Contacto</a>
-      <a href="contacto.html" class="inline-flex items-center gap-2 bg-mavron-orange text-white font-bold px-5 py-3 rounded-xl w-full justify-center mt-2">
-        <span>Cotizar Ahora</span>
-        <i class="fa-solid fa-arrow-right"></i>
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white text-slate-800 mt-3 p-4 rounded-xl border border-slate-200 shadow-lg space-y-3">
+      <a href="index.html" class="block font-bold py-1 text-testing-orange">Inicio</a>
+      <a href="nosotros.html" class="block font-semibold py-1 hover:text-testing-orange">Nosotros</a>
+      <a href="servicios.html" class="block font-semibold py-1 hover:text-testing-orange">Servicios</a>
+      <a href="proyectos.html" class="block font-semibold py-1 hover:text-testing-orange">Proyectos</a>
+      <a href="contacto.html" class="block font-semibold py-1 hover:text-testing-orange">Contacto</a>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-testing-orange text-white font-bold px-4 py-2.5 rounded-lg w-full justify-center mt-2">
+        <span>Cotizaciones</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
     </div>
   </header>
+  <!-- ========================================== -->
+  <!-- FIN DEL NAVBAR                             -->
+  <!-- ========================================== -->
 
-  <!-- SECCIÓN HERO PRINCIPAL -->
-  <main class="relative w-full max-w-7xl mx-auto px-6 lg:px-16 pt-8 pb-16 lg:py-12 flex-grow flex items-center">
+  <!-- ========================================== -->
+  <!-- CONTENIDO PRINCIPAL (HOMEPAGE)              -->
+  <!-- ========================================== -->
+  <main class="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex-grow w-full">
     
-    <!-- TEXTO EN MARCA DE AGUA AL FONDO -->
-    <div class="absolute inset-0 flex flex-col justify-center overflow-hidden z-0">
-      <span class="watermark-text whitespace-nowrap">Industrial &amp;</span>
-      <span class="watermark-text whitespace-nowrap -mt-6">Manufacturing</span>
+    <!-- SECCIÓN NUESTRA FILOSOFÍA -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 text-slate-600 font-bold text-xs uppercase tracking-widest mb-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-800"></span>
+        <span>Nuestra Filosofía</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+        Soluciones técnicas para cada etapa de tu proyecto
+      </h1>
     </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- TARJETAS DESTACADAS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <!-- COLUMNA IZQUIERDA Y CENTRAL: TÍTULO Y TARJETA MÉTRICA -->
-      <div class="lg:col-span-8 space-y-8">
-        
-        <!-- TÍTULO PRINCIPAL EXACTO -->
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-white max-w-4xl">
-          Construyendo el Futuro de la Innovación Industrial
-        </h1>
-
-        <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-end pt-4">
-          
-          <!-- TARJETA BLANCA FLOTANTE (320+) -->
-          <div class="sm:col-span-6 bg-white text-slate-900 p-5 rounded-3xl shadow-2xl flex flex-col justify-between space-y-4 max-w-xs">
-            <div class="w-full h-36 rounded-2xl overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Fábrica Industrial" class="w-full h-full object-cover">
-            </div>
-            <div>
-              <div class="flex items-baseline gap-1">
-                <span class="text-4xl font-extrabold text-slate-900 tracking-tight">320</span>
-                <span class="text-3xl font-extrabold text-mavron-orange">+</span>
-              </div>
-              <p class="text-sm font-bold text-slate-800 leading-snug mt-1">
-                Hemos ayudado a industrias a construir de manera más inteligente.
-              </p>
-            </div>
-          </div>
-
-          <!-- DESCRIPCIÓN Y BOTÓN DE ACCIÓN -->
-          <div class="sm:col-span-6 space-y-4">
-            <h3 class="text-lg font-extrabold text-white tracking-wide">
-              Precisión. Rendimiento. Perfección.
-            </h3>
-            <p class="text-white/90 text-sm font-medium leading-relaxed">
-              Proporcionamos soluciones de manufactura confiables diseñadas para impulsar el crecimiento de su negocio con precisión, alto rendimiento y confianza.
-            </p>
-            <div class="pt-2">
-              <a href="contacto.html" class="bg-black text-white hover:bg-slate-900 font-bold px-6 py-3.5 rounded-xl inline-flex items-center gap-3 transition-all shadow-lg">
-                <span>Cotizar Ahora</span>
-                <span class="w-6 h-6 rounded-full bg-white text-black text-xs flex items-center justify-center font-black">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-
+      <!-- Tarjeta 1: Suelos -->
+      <div class="bg-testing-orange text-white p-8 rounded-3xl shadow-md flex flex-col justify-between h-64">
+        <div class="w-12 h-12">
+          <i class="fa-solid fa-hard-hat text-4xl"></i>
         </div>
-
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Suelos</h3>
+          <p class="text-white/90 text-sm">Estudios geotécnicos y control de calidad en campo.</p>
+        </div>
       </div>
 
-      <!-- COLUMNA DERECHA: IMAGEN INGENIERO / TÉCNICO -->
-      <div class="lg:col-span-4 flex justify-center lg:justify-end relative mt-8 lg:mt-0">
-        <div class="relative w-full max-w-md lg:max-w-none">
-          <img src="https://pawzia.foxcreation.online/mavron/wp-content/uploads/sites/4/2025/11/portrait-of-maintenance-engineer-or-apprentice-in-F7RGH7M-1.png" alt="Ingeniero Industrial Mavron" class="w-full h-auto object-contain drop-shadow-2xl">
+      <!-- Tarjeta 2: Concreto -->
+      <div class="bg-white border border-slate-300 text-slate-800 p-8 rounded-3xl shadow-sm flex flex-col justify-between h-64 hover:border-testing-orange transition-colors">
+        <div class="w-12 h-12 text-testing-orange">
+          <i class="fa-solid fa-cubes text-4xl"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-slate-900">Concreto</h3>
+          <p class="text-slate-600 text-sm">Pruebas de resistencia, revenimiento y ensaye de cilindros.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Materiales -->
+      <div class="bg-testing-orange text-white p-8 rounded-3xl shadow-md flex flex-col justify-between h-64">
+        <div class="w-12 h-12">
+          <i class="fa-solid fa-truck-ramp-box text-4xl"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Materiales</h3>
+          <p class="text-white/90 text-sm">Análisis de agregados y certificación de insumos de construcción.</p>
         </div>
       </div>
 
     </div>
+
   </main>
 
-  <!-- LÓGICA DEL MENÚ MÓVIL -->
+  <!-- ========================================== -->
+  <!-- PIE DE PÁGINA (FOOTER)                     -->
+  <!-- ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-8 px-6 text-center text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <p>© 2026 Testing - Suelos, Concreto, Materiales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INTERACTIVO MENÚ MÓVIL -->
   <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
 
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
   </script>
 </body>
 </html>
