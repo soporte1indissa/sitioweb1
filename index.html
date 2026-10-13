@@ -150,10 +150,12 @@
       
       <!-- ENCABEZADO DE SECCIÓN -->
       <div class="text-center max-w-4xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 text-slate-900 font-bold text-sm tracking-wide mb-3">
-          <!-- Círculo naranja estilo bullseye -->
-          <span class="w-3.5 h-3.5 rounded-full border-4 border-[#e05d06] bg-white box-content"></span>
-          <span class="uppercase">Nuestra Filosofía</span>
+        <div class="flex items-center justify-center gap-2 text-slate-900 font-bold text-sm tracking-wide mb-3">
+          <!-- Círculo exacto al de la muestra (anillo con punto central) -->
+          <div class="flex items-center justify-center w-5 h-5 rounded-full border-[3px] border-slate-700">
+            <div class="w-1.5 h-1.5 bg-slate-700 rounded-full"></div>
+          </div>
+          <span class="uppercase text-slate-600">Nuestra Filosofía</span>
         </div>
         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-tight tracking-tight">
           Soluciones técnicas para<br>cada etapa de tu proyecto
@@ -164,31 +166,51 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         
         <!-- TARJETA 1: MISIÓN (Fondo Naranja) -->
-        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between shadow-sm min-h-[360px]">
-          <div class="text-white mb-8">
-            <!-- Icono Casco y Lentes -->
-            <svg class="w-16 h-16 stroke-current fill-none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
+          <div class="text-white">
+            <!-- Ícono 1: Casco y Gafas -->
+            <svg class="w-16 h-16 stroke-white fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <!-- Casco -->
+              <path d="M7 26c0-9 7.6-16 17-16s17 7 17 16" />
+              <path d="M5 26h38v4H5z" />
+              <path d="M24 10V6M16 13l-3-4M32 13l3-4" />
+              <!-- Luz Frontal -->
+              <circle cx="24" cy="22" r="3" />
+              <!-- Gafas -->
+              <path d="M12 34h8c0 3-4 3-4 3s-4 0-4-3zM28 34h8c0 3-4 3-4 3s-4 0-4-3z" />
+              <path d="M20 34c0-2 2-2 4-2s4 0 4 2" />
+              <path d="M8 34a2 2 0 1 1-4 0 2 2 0 1 1 4 0zM44 34a2 2 0 1 1-4 0 2 2 0 1 1 4 0z" />
             </svg>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-white mb-4">Misión</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Misión</h3>
             <p class="text-white/90 text-[15px] leading-relaxed font-medium">
               Brindar servicios de laboratorio de calidad para proyectos de ingeniería y construcción, proporcionando parámetros de evaluación confiables para nuestros clientes.
             </p>
           </div>
         </div>
 
-        <!-- TARJETA 2: VISIÓN (Fondo Gris Claro) -->
-        <div class="bg-[#f8f9fa] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between shadow-sm min-h-[360px]">
-          <div class="text-[#e05d06] mb-8">
-            <!-- Icono Máquina de Ensayo -->
-            <svg class="w-16 h-16 stroke-current fill-none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+        <!-- TARJETA 2: VISIÓN (Fondo Blanco con borde fino) -->
+        <div class="bg-white border border-slate-200 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
+          <div class="text-[#e05d06]">
+            <!-- Ícono 2: Máquina / Prensa de ensayo -->
+            <svg class="w-16 h-16 stroke-[#e05d06] fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <!-- Estructura base -->
+              <path d="M8 40h32M14 40v-4M34 40v-4" />
+              <path d="M10 28h28v8H10z" />
+              <!-- Puntos panel base -->
+              <circle cx="14" cy="32" r="1" fill="#e05d06" />
+              <circle cx="18" cy="32" r="1" fill="#e05d06" />
+              <!-- Columnas -->
+              <path d="M12 28V12M36 28V12" />
+              <path d="M8 12h32M16 12v6M32 12v6" />
+              <!-- Elemento de compresión y muestra -->
+              <path d="M24 18v8M21 26l3 3 3-3" />
+              <path d="M18 28v-3h3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2h3v3" />
             </svg>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">Visión</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Visión</h3>
             <p class="text-slate-500 text-[15px] leading-relaxed font-medium">
               Consolidarnos como una empresa confiable que aporte valor a los proyectos de construcción, innovando constantemente para ofrecer servicios cada vez mas avanzados.
             </p>
@@ -196,15 +218,24 @@
         </div>
 
         <!-- TARJETA 3: NUESTRO COMPROMISO (Fondo Naranja) -->
-        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between shadow-sm min-h-[360px]">
-          <div class="text-white mb-8">
-            <!-- Icono Grúa/Carga -->
-            <svg class="w-16 h-16 stroke-current fill-none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
+          <div class="text-white">
+            <!-- Ícono 3: Carga/Grúa -->
+            <svg class="w-16 h-16 stroke-white fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <!-- Viga superior y polea -->
+              <path d="M10 12h28M24 12v4M24 16a3 3 0 1 0 0 6 3 3 0 1 0 0-6" />
+              <!-- Gancho -->
+              <path d="M24 22v2a2 2 0 0 0 4 0" />
+              <!-- Cables -->
+              <path d="M24 24L14 30M24 24l10 30" />
+              <!-- Bloque / Carga suspendida -->
+              <path d="M12 30h24v8H12z" />
+              <!-- Líneas de carga -->
+              <path d="M16 30v8M20 30v8M24 30v8M28 30v8M32 30v8" />
             </svg>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-white mb-4">Nuestro compromiso</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Nuestro compromiso</h3>
             <p class="text-white/90 text-[15px] leading-relaxed font-medium">
               Trabajamos para brindar resultados confiables, respaldados por la calidad de nuestros servicios y la confianza de nuestros clientes, con disponibilidad de operaciones a nivel nacional.
             </p>
