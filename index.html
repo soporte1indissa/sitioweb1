@@ -258,17 +258,17 @@
   <!-- ========================================== -->
   <!-- SECCION 3                                  -->
   <!-- ========================================== -->
-  <section class="w-full bg-[#fcfcfc] py-20 px-6 lg:px-16" id="section3-counter">
+  <section class="w-full bg-[#fcfcfc] py-16 lg:py-24 px-6 lg:px-16" id="seccion-3-container">
     <div class="max-w-7xl mx-auto">
       
-      <!-- GRID PRINCIPAL DE 3 COLUMNAS -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      <!-- GRID DE 3 COLUMNAS -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
         
-        <!-- COLUMNA IZQUIERDA: LISTA DE VENTAJAS -->
-        <div class="lg:col-span-3 flex flex-col space-y-8">
+        <!-- COLUMNA 1: VENTAJAS (IZQUIERDA) -->
+        <div class="lg:col-span-3 flex flex-col justify-between space-y-6">
           
-          <!-- Etiqueta superior -->
-          <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest mb-4">
+          <!-- ETIQUETA SOBRE NOSOTROS -->
+          <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest">
             <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
               <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
               <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
@@ -276,50 +276,85 @@
             <span class="tracking-wider">SOBRE NOSOTROS</span>
           </div>
 
-          <!-- Ventaja 1 -->
-          <div>
-            <div class="mb-3">
-              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <path d="M12 48h40M16 48V24l16-8 16 8v24M32 16v32M24 28h16M24 36h16" />
-                <rect x="26" y="40" width="12" height="8" />
+          <!-- ITEM 1: EXPERIENCIA TÉCNICA -->
+          <div class="space-y-2">
+            <div>
+              <!-- ÍCONO 1: HANGAR / BODEGA CON CAJA -->
+              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                <!-- Techo curvo -->
+                <path d="M8 20 C8 11, 40 11, 40 20" />
+                <line x1="6" y1="20" x2="42" y2="20" />
+                <!-- Paredes -->
+                <path d="M10 20 v20 h28 v-20" />
+                <!-- Entrada / Persiana -->
+                <path d="M16 40 v-13 h16 v13" />
+                <line x1="16" y1="32" x2="32" y2="32" />
+                <!-- Caja / Paquete al frente -->
+                <rect x="20" y="32" width="8" height="8" rx="1" fill="#fff" />
+                <line x1="20" y1="36" x2="28" y2="36" />
+                <line x1="24" y1="32" x2="24" y2="36" />
               </svg>
             </div>
-            <h4 class="text-xl font-bold text-slate-900 mb-2">Experiencia técnica</h4>
+            <h4 class="text-xl font-bold text-slate-900 leading-snug">Experiencia técnica</h4>
             <p class="text-slate-500 text-sm leading-relaxed">
               Personal capacitado para realizar ensayos y evaluaciones con precisión.
             </p>
           </div>
 
-          <!-- Ventaja 2 (Fondo blanco redondeado como la muestra) -->
-          <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 -mx-5">
-            <div class="mb-3">
-              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <circle cx="32" cy="24" r="8" />
-                <path d="M16 24h8M40 24h8M24 40v8M40 40v8" />
-                <path d="M28 24v16M36 24v16" />
+          <!-- ITEM 2: RESULTADOS CONFIABLES (TARJETA BLANCA FLOTANTE) -->
+          <div class="bg-white p-6 rounded-[1.8rem] shadow-sm border border-slate-100 -mx-3 space-y-2">
+            <div>
+              <!-- ÍCONO 2: ESTRUCTURA CON POLEAS, MEDIDOR Y GANCHO -->
+              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                <!-- Viga y postes -->
+                <line x1="6" y1="12" x2="42" y2="12" />
+                <line x1="10" y1="12" x2="10" y2="36" />
+                <line x1="38" y1="12" x2="38" y2="36" />
+                <!-- Poleas circulares -->
+                <circle cx="16" cy="18" r="3.5" />
+                <circle cx="32" cy="18" r="3.5" />
+                <!-- Cables -->
+                <line x1="16" y1="21.5" x2="16" y2="30" />
+                <line x1="32" y1="21.5" x2="32" y2="32" />
+                <!-- Manómetro / Péndulo central -->
+                <circle cx="24" cy="27" r="4.5" />
+                <circle cx="24" cy="27" r="1.5" fill="#e05d06" />
+                <line x1="21" y1="25" x2="16" y2="21" />
+                <line x1="27" y1="25" x2="32" y2="21" />
+                <!-- Gancho lateral -->
+                <path d="M32 32 v2 a2 2 0 0 1 -2 2" />
               </svg>
             </div>
-            <h4 class="text-xl font-bold text-slate-900 mb-2">Resultados confiables</h4>
+            <h4 class="text-xl font-bold text-slate-900 leading-snug">Resultados confiables</h4>
             <p class="text-slate-500 text-sm leading-relaxed">
               Información técnica que respalda la evaluación y toma de decisiones en cada proyecto.
             </p>
           </div>
 
-          <!-- Ventaja 3 -->
-          <div>
-            <div class="mb-3">
-              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <line x1="14" y1="18" x2="50" y2="18" />
-                <path d="M32 18v8M32 30v4l-8 8M32 34l8 8" />
-                <rect x="18" y="42" width="28" height="10" rx="1" />
-                <line x1="22" y1="42" x2="22" y2="52" />
-                <line x1="26" y1="42" x2="26" y2="52" />
-                <line x1="30" y1="42" x2="30" y2="52" />
-                <line x1="34" y1="42" x2="34" y2="52" />
-                <line x1="38" y1="42" x2="38" y2="52" />
+          <!-- ITEM 3: COBERTURA NACIONAL -->
+          <div class="space-y-2">
+            <div>
+              <!-- ÍCONO 3: GRÚA LEVANTANDO CONTENEDOR ACANALADO -->
+              <svg class="w-12 h-12 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                <!-- Riel superior -->
+                <line x1="8" y1="10" x2="40" y2="10" />
+                <!-- Cable y polea -->
+                <line x1="24" y1="10" x2="24" y2="15" />
+                <circle cx="24" cy="18" r="3" />
+                <!-- Gancho y eslingas -->
+                <path d="M24 21 v2 a2 2 0 0 1 -2 2" />
+                <line x1="24" y1="24" x2="13" y2="30" />
+                <line x1="24" y1="24" x2="35" y2="30" />
+                <!-- Contenedor con ranuras -->
+                <rect x="10" y="30" width="28" height="11" rx="2" />
+                <line x1="15" y1="30" x2="15" y2="41" />
+                <line x1="20" y1="30" x2="20" y2="41" />
+                <line x1="24" y1="30" x2="24" y2="41" />
+                <line x1="28" y1="30" x2="28" y2="41" />
+                <line x1="33" y1="30" x2="33" y2="41" />
               </svg>
             </div>
-            <h4 class="text-xl font-bold text-slate-900 mb-2">Cobertura nacional</h4>
+            <h4 class="text-xl font-bold text-slate-900 leading-snug">Cobertura nacional</h4>
             <p class="text-slate-500 text-sm leading-relaxed">
               Servicios de laboratorio y campo para proyectos de construcción a nivel nacional.
             </p>
@@ -327,65 +362,68 @@
 
         </div>
 
-        <!-- COLUMNA CENTRAL: TÍTULO, IMÁGENES Y DESCRIPCIÓN -->
-        <div class="lg:col-span-6 flex flex-col pt-2">
+        <!-- COLUMNA 2: TÍTULO, FOTOS VERTICALES Y TEXTO (CENTRO) -->
+        <div class="lg:col-span-6 flex flex-col justify-between pt-1">
           
-          <h2 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight mb-10">
+          <!-- TÍTULO PRINCIPAL -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight mb-8">
             Respaldo técnico para tus proyectos de construcción
           </h2>
 
-          <!-- Galería de dos imágenes -->
-          <div class="flex gap-4 mb-10">
-            <div class="w-1/2 h-[280px] rounded-[1.5rem] overflow-hidden shadow-md">
-              <img src="assets/4.jpeg" alt="Personal capacitado" class="w-full h-full object-cover">
+          <!-- GALERÍA DE 2 IMÁGENES VERTICALES -->
+          <div class="grid grid-cols-2 gap-4 sm:gap-6 mb-8">
+            <div class="h-[280px] sm:h-[340px] w-full rounded-[2rem] overflow-hidden shadow-md">
+              <img src="assets/4.jpeg" alt="Personal capacitado en campo" class="w-full h-full object-cover">
             </div>
-            <div class="w-1/2 h-[280px] rounded-[1.5rem] overflow-hidden shadow-md">
-              <img src="assets/5.jpeg" alt="Laboratorio en campo" class="w-full h-full object-cover">
+            <div class="h-[280px] sm:h-[340px] w-full rounded-[2rem] overflow-hidden shadow-md">
+              <img src="assets/5.jpeg" alt="Laboratorio de ensayos" class="w-full h-full object-cover">
             </div>
           </div>
 
-          <!-- Texto descriptivo -->
-          <div class="max-w-md">
-            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-snug">
+          <!-- DESCRIPCIÓN Y BOTÓN -->
+          <div class="space-y-4">
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 leading-snug">
               TESTING es un laboratorio especializado en ensayos de suelos y materiales de construcción
             </h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-8">
+            <p class="text-slate-500 text-sm leading-relaxed">
               Desde 2021 brindamos servicios de laboratorio y campo a nivel nacional, proporcionando resultados confiables para apoyar la evaluación y toma de decisiones en proyectos de construcción.
             </p>
-            <a href="nosotros.html" class="bg-slate-600 hover:bg-slate-700 text-white font-bold px-6 py-2.5 rounded-lg inline-block transition-colors shadow-sm text-sm">
-              Conócenos
-            </a>
+            <div class="pt-2">
+              <a href="nosotros.html" class="bg-slate-600 hover:bg-slate-700 text-white font-bold px-7 py-3 rounded-xl inline-block transition-colors shadow-sm text-sm">
+                Conócenos
+              </a>
+            </div>
           </div>
 
         </div>
 
-        <!-- COLUMNA DERECHA: BLOQUE NARANJA CON CONTADORES ANIMADOS -->
+        <!-- COLUMNA 3: TARJETA NARANJA CON CONTADORES (DERECHA) -->
         <div class="lg:col-span-3">
-          <div class="bg-[#e05d06] rounded-[2rem] p-10 h-full flex flex-col justify-center space-y-12 shadow-lg">
+          <div class="bg-[#e05d06] rounded-[2.5rem] p-8 sm:p-10 h-full flex flex-col justify-between shadow-xl min-h-[460px]">
             
-            <!-- Contador 1 -->
-            <div class="border-b border-white/20 pb-10">
+            <!-- CONTADOR 1 -->
+            <div class="border-b border-white/20 pb-8">
               <div class="flex items-baseline mb-2">
-                <span class="text-6xl font-black text-white tracking-tight leading-none counter-stat" data-target="100">0</span>
-                <span class="text-4xl font-black text-white ml-1 leading-none">+</span>
+                <span class="text-5xl sm:text-6xl font-black text-white tracking-tight leading-none" id="s3-counter-1">0</span>
+                <span class="text-3xl sm:text-4xl font-black text-white ml-1 leading-none">+</span>
               </div>
               <p class="text-white font-bold text-base leading-tight">Proyectos atendidos</p>
             </div>
 
-            <!-- Contador 2 -->
-            <div class="border-b border-white/20 pb-10">
+            <!-- CONTADOR 2 -->
+            <div class="border-b border-white/20 py-8">
               <div class="flex items-baseline mb-2">
-                <span class="text-6xl font-black text-white tracking-tight leading-none counter-stat" data-target="120">0</span>
-                <span class="text-4xl font-black text-white ml-1 leading-none">+</span>
+                <span class="text-5xl sm:text-6xl font-black text-white tracking-tight leading-none" id="s3-counter-2">0</span>
+                <span class="text-3xl sm:text-4xl font-black text-white ml-1 leading-none">+</span>
               </div>
               <p class="text-white font-bold text-base leading-tight">Ensayos realizados</p>
             </div>
 
-            <!-- Contador 3 -->
-            <div>
+            <!-- CONTADOR 3 -->
+            <div class="pt-8">
               <div class="flex items-baseline mb-2">
-                <span class="text-6xl font-black text-white tracking-tight leading-none counter-stat" data-target="100">0</span>
-                <span class="text-4xl font-black text-white ml-1 leading-none">+</span>
+                <span class="text-5xl sm:text-6xl font-black text-white tracking-tight leading-none" id="s3-counter-3">0</span>
+                <span class="text-3xl sm:text-4xl font-black text-white ml-1 leading-none">+</span>
               </div>
               <p class="text-white font-bold text-base leading-tight">Clientes atendidos</p>
             </div>
@@ -395,6 +433,62 @@
 
       </div>
     </div>
+
+    <!-- SCRIPT DE ANIMACIÓN AUTÓNOMO PARA LA SECCIÓN 3 -->
+    <script>
+      (function() {
+        const targets = [
+          { id: 's3-counter-1', target: 100 },
+          { id: 's3-counter-2', target: 120 },
+          { id: 's3-counter-3', target: 100 }
+        ];
+
+        let hasRun = false;
+
+        function runCounters() {
+          if (hasRun) return;
+          hasRun = true;
+          const duration = 2000;
+          const start = performance.now();
+
+          function step(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const ease = progress * (2 - progress); // Suavizado ease-out
+
+            targets.forEach(item => {
+              const el = document.getElementById(item.id);
+              if (el) {
+                el.textContent = Math.floor(ease * item.target);
+              }
+            });
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              targets.forEach(item => {
+                const el = document.getElementById(item.id);
+                if (el) el.textContent = item.target;
+              });
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        const section = document.getElementById('seccion-3-container');
+        if (section && 'IntersectionObserver' in window) {
+          const obs = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+              runCounters();
+              obs.disconnect();
+            }
+          }, { threshold: 0.15 });
+          obs.observe(section);
+        } else {
+          // Si el navegador no soporta IntersectionObserver o ya está visible
+          window.addEventListener('load', runCounters);
+        }
+      })();
+    </script>
   </section>
   <!-- ========================================== -->
   <!-- FIN SECCION 3                              -->
