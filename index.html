@@ -145,101 +145,117 @@
   <!-- ========================================== -->
   <!-- SECCION 2                                  -->
   <!-- ========================================== -->
-  <section class="w-full bg-white py-20 px-6 lg:px-16">
-    <div class="max-w-7xl mx-auto">
+  <section class="w-full bg-white py-16 lg:py-20 px-6 lg:px-12">
+    <div class="max-w-6xl mx-auto">
       
       <!-- ENCABEZADO DE SECCIÓN -->
-      <div class="text-center max-w-4xl mx-auto mb-14">
-        <div class="flex items-center justify-center gap-2 text-slate-900 font-bold text-sm tracking-wide mb-3">
-          <!-- Círculo exacto al de la muestra (anillo con punto central) -->
-          <div class="flex items-center justify-center w-5 h-5 rounded-full border-[3px] border-slate-700">
-            <div class="w-1.5 h-1.5 bg-slate-700 rounded-full"></div>
-          </div>
-          <span class="uppercase text-slate-600">Nuestra Filosofía</span>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center justify-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest mb-3">
+          <!-- Círculo exacto con punto central (bullseye) -->
+          <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
+          </svg>
+          <span class="tracking-wider">Nuestra Filosofía</span>
         </div>
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-tight tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
           Soluciones técnicas para<br>cada etapa de tu proyecto
         </h2>
       </div>
 
-      <!-- GRID DE TARJETAS (Misión, Visión, Nuestro Compromiso) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- GRID DE TARJETAS VERTICALES -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7">
         
-        <!-- TARJETA 1: MISIÓN (Fondo Naranja) -->
-        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
-          <div class="text-white">
-            <!-- Ícono 1: Casco y Gafas -->
-            <svg class="w-16 h-16 stroke-white fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <!-- Casco -->
-              <path d="M7 26c0-9 7.6-16 17-16s17 7 17 16" />
-              <path d="M5 26h38v4H5z" />
-              <path d="M24 10V6M16 13l-3-4M32 13l3-4" />
-              <!-- Luz Frontal -->
-              <circle cx="24" cy="22" r="3" />
-              <!-- Gafas -->
-              <path d="M12 34h8c0 3-4 3-4 3s-4 0-4-3zM28 34h8c0 3-4 3-4 3s-4 0-4-3z" />
-              <path d="M20 34c0-2 2-2 4-2s4 0 4 2" />
-              <path d="M8 34a2 2 0 1 1-4 0 2 2 0 1 1 4 0zM44 34a2 2 0 1 1-4 0 2 2 0 1 1 4 0z" />
-            </svg>
-          </div>
+        <!-- TARJETA 1: MISIÓN (NARANJA) -->
+        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
           <div>
-            <h3 class="text-2xl font-bold text-white mb-3">Misión</h3>
-            <p class="text-white/90 text-[15px] leading-relaxed font-medium">
-              Brindar servicios de laboratorio de calidad para proyectos de ingeniería y construcción, proporcionando parámetros de evaluación confiables para nuestros clientes.
-            </p>
+            <!-- ÍCONO 1: CASCO INDUSTRIAL CON LINTERNA Y GAFAS -->
+            <div class="mb-5">
+              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <!-- Casco -->
+                <path d="M16 32 C16 18, 48 18, 48 32" />
+                <path d="M32 18 V12" />
+                <path d="M23 21 L19 15" />
+                <path d="M41 21 L45 15" />
+                <circle cx="32" cy="25" r="3" />
+                <rect x="12" y="32" width="40" height="4" rx="2" />
+                <!-- Gafas de protección -->
+                <path d="M16 43 C16 39, 19 38, 24 38 H27 C29 38, 30 40, 30 42 V44 C30 47, 28 48, 25 48 H19 C16 48, 16 46, 16 43 Z" />
+                <path d="M48 43 C48 39, 45 38, 40 38 H37 C35 38, 34 40, 34 42 V44 C34 47, 36 48, 39 48 H45 C48 48, 48 46, 48 43 Z" />
+                <path d="M30 42 C31 44, 33 44, 34 42" />
+                <line x1="12" y1="43" x2="16" y2="43" />
+                <line x1="48" y1="43" x2="52" y2="43" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Misión</h3>
           </div>
+          <p class="text-white/95 text-[14px] leading-relaxed font-normal">
+            Brindar servicios de laboratorio de calidad para proyectos de ingeniería y construcción, proporcionando parámetros de evaluacion confiables para nuestros clientes.
+          </p>
         </div>
 
-        <!-- TARJETA 2: VISIÓN (Fondo Blanco con borde fino) -->
-        <div class="bg-white border border-slate-200 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
-          <div class="text-[#e05d06]">
-            <!-- Ícono 2: Máquina / Prensa de ensayo -->
-            <svg class="w-16 h-16 stroke-[#e05d06] fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <!-- Estructura base -->
-              <path d="M8 40h32M14 40v-4M34 40v-4" />
-              <path d="M10 28h28v8H10z" />
-              <!-- Puntos panel base -->
-              <circle cx="14" cy="32" r="1" fill="#e05d06" />
-              <circle cx="18" cy="32" r="1" fill="#e05d06" />
-              <!-- Columnas -->
-              <path d="M12 28V12M36 28V12" />
-              <path d="M8 12h32M16 12v6M32 12v6" />
-              <!-- Elemento de compresión y muestra -->
-              <path d="M24 18v8M21 26l3 3 3-3" />
-              <path d="M18 28v-3h3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2h3v3" />
-            </svg>
-          </div>
+        <!-- TARJETA 2: VISIÓN (BLANCO CON BORDE) -->
+        <div class="bg-white border border-slate-300 rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
           <div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">Visión</h3>
-            <p class="text-slate-500 text-[15px] leading-relaxed font-medium">
-              Consolidarnos como una empresa confiable que aporte valor a los proyectos de construcción, innovando constantemente para ofrecer servicios cada vez mas avanzados.
-            </p>
+            <!-- ÍCONO 2: MÁQUINA DE CORTE / PRENSA CNC -->
+            <div class="mb-5">
+              <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <!-- Marco / Guías superiores -->
+                <line x1="15" y1="14" x2="49" y2="14" />
+                <line x1="19" y1="14" x2="19" y2="40" />
+                <line x1="45" y1="14" x2="45" y2="40" />
+                <!-- Cabezal e inyector/boquilla -->
+                <rect x="27" y="17" width="10" height="7" rx="1" />
+                <polygon points="30,24 34,24 32,29" />
+                <!-- Pieza de trabajo mecanizada -->
+                <path d="M25 40 V35 H28 C29 37, 35 37, 36 35 H39 V40" />
+                <!-- Mesa base con botones -->
+                <rect x="13" y="40" width="38" height="8" rx="2" />
+                <circle cx="20" cy="44" r="1" fill="#e05d06" />
+                <line x1="24" y1="44" x2="28" y2="44" />
+                <!-- Soportes / Patas inferiores -->
+                <line x1="20" y1="48" x2="20" y2="52" />
+                <line x1="44" y1="48" x2="44" y2="52" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Visión</h3>
           </div>
+          <p class="text-slate-600 text-[14px] leading-relaxed font-normal">
+            Consolidarnos como una empresa confiable que aporte valor a los proyectos de construcción, innovando constantemente para ofrecer servicios cada vez mas avanzados.
+          </p>
         </div>
 
-        <!-- TARJETA 3: NUESTRO COMPROMISO (Fondo Naranja) -->
-        <div class="bg-[#e05d06] rounded-[2rem] p-8 lg:p-10 flex flex-col justify-start shadow-sm min-h-[360px] space-y-5">
-          <div class="text-white">
-            <!-- Ícono 3: Carga/Grúa -->
-            <svg class="w-16 h-16 stroke-white fill-none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <!-- Viga superior y polea -->
-              <path d="M10 12h28M24 12v4M24 16a3 3 0 1 0 0 6 3 3 0 1 0 0-6" />
-              <!-- Gancho -->
-              <path d="M24 22v2a2 2 0 0 0 4 0" />
-              <!-- Cables -->
-              <path d="M24 24L14 30M24 24l10 30" />
-              <!-- Bloque / Carga suspendida -->
-              <path d="M12 30h24v8H12z" />
-              <!-- Líneas de carga -->
-              <path d="M16 30v8M20 30v8M24 30v8M28 30v8M32 30v8" />
-            </svg>
-          </div>
+        <!-- TARJETA 3: NUESTRO COMPROMISO (NARANJA) -->
+        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
           <div>
-            <h3 class="text-2xl font-bold text-white mb-3">Nuestro compromiso</h3>
-            <p class="text-white/90 text-[15px] leading-relaxed font-medium">
-              Trabajamos para brindar resultados confiables, respaldados por la calidad de nuestros servicios y la confianza de nuestros clientes, con disponibilidad de operaciones a nivel nacional.
-            </p>
+            <!-- ÍCONO 3: GRÚA / POLIPASTO LEVANTANDO CONTENEDOR -->
+            <div class="mb-5">
+              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <!-- Riel y cable -->
+                <line x1="14" y1="14" x2="50" y2="14" />
+                <line x1="32" y1="14" x2="32" y2="20" />
+                <circle cx="32" cy="23" r="3" />
+                <!-- Gancho y eslingas -->
+                <path d="M32 26 V28 C32 30, 30 30, 29 28" />
+                <line x1="32" y1="28" x2="19" y2="35" />
+                <line x1="32" y1="28" x2="45" y2="35" />
+                <!-- Contenedor acanalado -->
+                <line x1="17" y1="35" x2="47" y2="35" />
+                <rect x="17" y="37" width="30" height="15" rx="2" />
+                <!-- Ranuras verticales del contenedor -->
+                <line x1="21" y1="37" x2="21" y2="52" />
+                <line x1="25" y1="37" x2="25" y2="52" />
+                <line x1="29" y1="37" x2="29" y2="52" />
+                <line x1="33" y1="37" x2="33" y2="52" />
+                <line x1="37" y1="37" x2="37" y2="52" />
+                <line x1="41" y1="37" x2="41" y2="52" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Nuestro compromiso</h3>
           </div>
+          <p class="text-white/95 text-[14px] leading-relaxed font-normal">
+            Trabajamos para brindar resultados confiables, respaldados por la calidad de nuestros servicios y la confianza de nuestros clientes, con disponibilidad de operaciones a nivel nacional.
+          </p>
         </div>
 
       </div>
