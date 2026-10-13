@@ -1193,11 +1193,20 @@
   <!-- ========================================== -->
   <!-- PIE DE PÁGINA                              -->
   <!-- ========================================== -->
-  <footer class="bg-slate-900 text-slate-400 py-8 px-6 text-center text-sm border-t border-slate-800">
-    <div class="max-w-7xl mx-auto">
-      <p>© 2026 Testing - Suelos, Concreto, Materiales. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+ <script>
+  // Cargar el footer dinámicamente
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("footer.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Error al cargar el footer");
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      })
+      .catch(error => console.error("Error:", error));
+  });
+</script>
 
   <!-- ========================================== -->
   <!-- SCRIPTS (MENÚ MÓVIL Y ANIMACIÓN 2 SEG)     -->
