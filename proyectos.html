@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos y Aplicaciones Técnicas - Testing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .bg-testing-orange { background-color: #e05d06; }
+    .text-testing-orange { color: #e05d06; }
+    .border-testing-orange { border-color: #e05d06; }
+  </style>
+</head>
+<body class="bg-[#fcfcfc] font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- NAVBAR / ENCABEZADO                        -->
+  <!-- ========================================== -->
+  <header class="bg-white text-slate-800 shadow-sm sticky top-0 z-50 py-4 px-6 lg:px-12 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo.jpeg" alt="Testing - Suelos, Concreto, Materiales" class="h-12 w-auto object-contain">
+      </a>
+
+      <!-- MENÚ DESKTOP -->
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-800 text-base">
+        <a href="index.html" class="hover:text-testing-orange transition-colors">Inicio</a>
+        <a href="nosotros.html" class="hover:text-testing-orange transition-colors">Nosotros</a>
+        <a href="servicios.html" class="hover:text-testing-orange transition-colors">Servicios</a>
+        <a href="proyectos.html" class="text-testing-orange font-bold transition-colors">Proyectos</a>
+        <a href="contacto.html" class="hover:text-testing-orange transition-colors">Contacto</a>
+      </nav>
+
+      <!-- BOTÓN COTIZACIONES -->
+      <div class="hidden lg:block">
+        <a href="contacto.html" class="bg-testing-orange hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-lg inline-flex items-center gap-3 transition-colors shadow-sm">
+          <span>Cotizaciones</span>
+          <span class="w-5 h-5 rounded-full bg-white text-testing-orange text-xs flex items-center justify-center font-black">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- BOTÓN MÓVIL -->
+      <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white text-slate-800 mt-3 p-4 rounded-xl border border-slate-200 shadow-lg space-y-3">
+      <a href="index.html" class="block font-semibold py-1 hover:text-testing-orange">Inicio</a>
+      <a href="nosotros.html" class="block font-semibold py-1 hover:text-testing-orange">Nosotros</a>
+      <a href="servicios.html" class="block font-semibold py-1 hover:text-testing-orange">Servicios</a>
+      <a href="proyectos.html" class="block font-bold py-1 text-testing-orange">Proyectos</a>
+      <a href="contacto.html" class="block font-semibold py-1 hover:text-testing-orange">Contacto</a>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-testing-orange text-white font-bold px-4 py-2.5 rounded-lg w-full justify-center mt-2">
+        <span>Cotizaciones</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO INTERNO: CABECERA NARANJA TOTAL       -->
+  <!-- ========================================== -->
+  <section class="relative w-full bg-[#e05d06] py-20 px-6 lg:px-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/1.jpeg" alt="Control de Calidad en Proyectos" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-[#e05d06]/85 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-[#e05d06]/55"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="inline-flex items-center gap-2 text-white/90 font-bold text-xs uppercase tracking-widest mb-4">
+        <a href="index.html" class="hover:text-slate-900 transition-colors">Inicio</a>
+        <span>/</span>
+        <span class="text-white">Proyectos</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl drop-shadow-sm">
+        Casos de Aplicación y Proyectos Atendidos
+      </h1>
+      <p class="text-white/95 text-lg sm:text-xl font-medium mt-4 max-w-2xl leading-relaxed">
+        Respaldo técnico en infraestructura vial, edificaciones civiles y cimentaciones complejas a nivel nacional.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- GALERÍA DE PROYECTOS CON FILTROS           -->
+  <!-- ========================================== -->
+  <section class="w-full py-20 px-6 lg:px-16 bg-white">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- ENCABEZADO Y FILTROS -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+        <div>
+          <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest mb-3">
+            <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
+            </svg>
+            <span class="tracking-wider">PORTAFOLIO OPERATIVO</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+            Nuestros ámbitos de intervención
+          </h2>
+        </div>
+
+        <!-- BOTONES DE FILTRO -->
+        <div class="flex flex-wrap gap-2 text-xs font-bold">
+          <button class="filter-btn active bg-slate-900 text-white px-5 py-2.5 rounded-full transition-all" data-filter="all">Todos</button>
+          <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-full transition-all" data-filter="viales">Infraestructura Vial</button>
+          <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-full transition-all" data-filter="concreto">Concreto y Estructuras</button>
+          <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-full transition-all" data-filter="geotecnia">Geotecnia y Suelos</button>
+        </div>
+      </div>
+
+      <!-- GRID DE TARJETAS DE PROYECTO (6 CASOS) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- PROYECTO 1: VIAL -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="viales">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/16.jpeg" alt="Control de Terracerías y Pavimentos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Infraestructura Vial</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Control de Calidad en Terracerías y Bases Viales
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Verificación sistemática de compactación en capas de sub-base y base granular para asegurar la vida útil de pavimentos frente al tránsito pesado.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Ensayos Proctor Modificado y CBR</p>
+                <p>• Densidades de campo con Cono de Arena</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2: CONCRETO -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/17.jpeg" alt="Vaciado y Resistencia de Concreto" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Concreto Estructural</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Inspección de Concreto Fresco en Edificaciones
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Monitoreo directo a pie de obra en fundiciones continuas para validar trabajabilidad, temperatura de colado y toma de testigos cilíndricos.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Asentamiento (Slump) y temperatura</p>
+                <p>• Compresión a 7, 14 y 28 días (ASTM C 39)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 3: GEOTECNIA -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="geotecnia">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/18.jpeg" alt="Pozos a Cielo Abierto y Estratigrafía" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Geotecnia y Suelos</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Perfilado Estratigráfico y Pozos a Cielo Abierto
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Excavación y registro visual del subsuelo con extracción de muestras inalteradas cúbicas para determinación de parámetros de cohesión y fricción.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Corte Directo consolidado y rápido</p>
+                <p>• Límites de consistencia y clasificación USCS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 4: GEOTECNIA -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="geotecnia">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/19.jpeg" alt="Sondeos SPT en Obra" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Geotecnia y Suelos</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Exploración a Profundidad mediante SPT
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Determinación de la compacidad relativa y capacidad de carga admisible en terrenos destinados a infraestructura pública, puentes y naves industriales.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Conteo de golpes N-SPT por estrato</p>
+                <p>• Informe para cálculo de cimentación profunda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 5: CONCRETO Y MAMPOSTERÍA -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/20.jpeg" alt="Ensayos de Bloques de Concreto" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Mampostería</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Certificación de Unidades de Bloque y Muros
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Ensayos destructivos controlados en laboratorio para certificar la resistencia a compresión y absorción hídrica en unidades huecas de concreto.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Resistencia a compresión en bloque</p>
+                <p>• Evaluación geométrica y absorción de agua</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 6: CONCRETO / VIAL -->
+        <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
+          <div>
+            <div class="h-60 w-full overflow-hidden">
+              <img src="assets/21.jpeg" alt="Evaluación de Fluidez y Escurrimiento" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Concreto Especial</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
+                Fluidez y Escurrimiento en Mezclas de Alto Desempeño
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                Comprobación del comportamiento reológico en elementos densamente armados mediante ensayos de escurrimiento sin segregación de agregados.
+              </p>
+              <div class="border-t border-slate-200/80 pt-3 text-xs text-slate-600 font-semibold space-y-1">
+                <p>• Ensayo de flujo y estabilidad visual</p>
+                <p>• Control de granulometría en agregados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN NARANJA CORPORATIVA: METODOLOGÍA   -->
+  <!-- ========================================== -->
+  <section class="w-full bg-[#e05d06] py-20 px-6 lg:px-16 text-white">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="uppercase tracking-widest text-xs font-bold bg-white/20 px-4 py-1.5 rounded-full inline-block mb-3">
+          RIGOR OPERATIVO EN OBRA
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+          ¿Cómo aseguramos la validez técnica de cada resultado?
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg mt-4 leading-relaxed">
+          Cada muestra recolectada sigue una cadena de custodia estricta que respalda legal y estructuralmente las decisiones de supervisores y residentes.
+        </p>
+      </div>
+
+      <!-- 3 TARJETAS BLANCAS DENTRO DEL FONDO NARANJA -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white text-slate-900 rounded-[2rem] p-8 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-testing-orange flex items-center justify-center font-black text-xl mb-6">
+              01
+            </div>
+            <h3 class="text-2xl font-bold mb-3 tracking-tight">Muestreo Normalizado</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Toma representativa en campo bajo normativas ASTM y AASHTO con instrumental calibrado y personal acreditado.
+            </p>
+          </div>
+          <p class="text-xs font-bold text-testing-orange uppercase tracking-wider mt-6">Fase Inicial en Obra</p>
+        </div>
+
+        <div class="bg-white text-slate-900 rounded-[2rem] p-8 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-testing-orange flex items-center justify-center font-black text-xl mb-6">
+              02
+            </div>
+            <h3 class="text-2xl font-bold mb-3 tracking-tight">Ensayo en Laboratorio</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Procesamiento con prensas hidráulicas, tamices normalizados y control riguroso de humedad, temperatura y curado.
+            </p>
+          </div>
+          <p class="text-xs font-bold text-testing-orange uppercase tracking-wider mt-6">Fase Analítica</p>
+        </div>
+
+        <div class="bg-white text-slate-900 rounded-[2rem] p-8 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-testing-orange flex items-center justify-center font-black text-xl mb-6">
+              03
+            </div>
+            <h3 class="text-2xl font-bold mb-3 tracking-tight">Dictamen Certificado</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Emisión de informe técnico claro con curvas granulométricas, resistencias y conclusiones directas para la bitácora.
+            </p>
+          </div>
+          <p class="text-xs font-bold text-testing-orange uppercase tracking-wider mt-6">Fase Documental</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- BANNER FINAL CTA                           -->
+  <!-- ========================================== -->
+  <section class="w-full bg-[#f8f9fa] py-16 px-6 lg:px-16 text-center border-t border-slate-200">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">
+        ¿Tu proyecto requiere supervisión y control de materiales?
+      </h2>
+      <p class="text-slate-600 text-base leading-relaxed">
+        Cuéntanos la ubicación y tipo de obra para coordinar la logística de toma de muestras o cotizar un paquete completo de ensayos.
+      </p>
+      <div class="pt-2">
+        <a href="contacto.html" class="bg-testing-orange hover:bg-orange-700 text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-md text-sm inline-flex items-center gap-3">
+          <span>Coordinar con Laboratorio</span>
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER / PIE DE PÁGINA (GLOBAL)            -->
+  <!-- ========================================== -->
+  <footer class="w-full bg-[#050505] text-white pt-20 pb-12 px-6 lg:px-16 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- GRID DE 4 COLUMNAS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
+        
+        <!-- COLUMNA 1: LOGO2.PNG, TÍTULO Y DESCRIPCIÓN -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="flex items-center">
+            <img src="assets/logo2.png" alt="Testing - Suelos, Concreto, Materiales" class="h-14 w-auto object-contain">
+          </div>
+          
+          <h3 class="text-white text-lg sm:text-xl font-bold leading-snug">
+            TESTING es un laboratorio especializado en ensayos de suelos, materiales y concreto.
+          </h3>
+          
+          <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+            Nuestro trabajo busca proporcionar resultados confiables que sirvan como respaldo técnico para la toma de decisiones en obra.
+          </p>
+        </div>
+
+        <!-- COLUMNA 2: ACCESOS (ENLACES RÁPIDOS) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+            Accesos
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li>
+              <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="nosotros.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Nosotros</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Servicios</span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Proyectos</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Cotizaciones</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA 3: SERVICIOS -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+            Servicios
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Granulometría</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Densidad de Campo</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Asentamiento del concreto</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Compactación Proctor</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Resistencia del concreto</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Abrasión de Núcleos</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA 4: CONTÁCTANOS Y REDES SOCIALES -->
+        <div class="lg:col-span-3 space-y-6">
+          <div class="space-y-4">
+            <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+              Contáctanos
+            </h4>
+            <div class="space-y-2.5 text-sm text-slate-300">
+              <p class="flex items-center gap-3">
+                <span class="text-[#e05d06] text-base">✉</span>
+                <a href="mailto:gruposanagustin09@gmail.com" class="hover:text-white transition-colors">gruposanagustin09@gmail.com</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="text-[#e05d06] text-base">📞</span>
+                <a href="tel:79510545" class="hover:text-white transition-colors">+502 7951-0545</a>
+              </p>
+              <p class="flex items-start gap-3 leading-relaxed">
+                <span class="text-[#e05d06] text-base mt-0.5">📍</span>
+                <span>3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- REDES SOCIALES -->
+          <div class="space-y-3 pt-2">
+            <h5 class="text-white text-lg font-bold">
+              Redes Sociales
+            </h5>
+            <div class="flex items-center gap-3">
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-x-twitter text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-instagram text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-youtube text-base"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT INFERIOR -->
+      <div class="pt-8 text-center text-xs text-slate-500">
+        <p>© 2026 Testing - Suelos, Concreto, Materiales. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- SCRIPTS: MENÚ MÓVIL Y FILTROS INTERACTIVOS -->
+  <!-- ========================================== -->
+  <script>
+    // Menú móvil
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Filtros de categoría de proyectos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Estilos del botón activo
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-slate-900', 'text-white');
+          b.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        button.classList.remove('bg-slate-100', 'text-slate-700');
+        button.classList.add('bg-slate-900', 'text-white');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
