@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Cotizaciones - Testing | Suelos, Concreto y Materiales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .bg-testing-orange { background-color: #e05d06; }
+    .text-testing-orange { color: #e05d06; }
+    .border-testing-orange { border-color: #e05d06; }
+    .focus-ring-orange:focus {
+      outline: none;
+      border-color: #e05d06;
+      box-shadow: 0 0 0 3px rgba(224, 93, 6, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-[#fcfcfc] font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- NAVBAR / ENCABEZADO                        -->
+  <!-- ========================================== -->
+  <header class="bg-white text-slate-800 shadow-sm sticky top-0 z-50 py-4 px-6 lg:px-12 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo.jpeg" alt="Testing - Suelos, Concreto, Materiales" class="h-12 w-auto object-contain">
+      </a>
+
+      <!-- MENÚ DESKTOP -->
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-slate-800 text-base">
+        <a href="index.html" class="hover:text-testing-orange transition-colors">Inicio</a>
+        <a href="nosotros.html" class="hover:text-testing-orange transition-colors">Nosotros</a>
+        <a href="servicios.html" class="hover:text-testing-orange transition-colors">Servicios</a>
+        <a href="proyectos.html" class="hover:text-testing-orange transition-colors">Proyectos</a>
+        <a href="contacto.html" class="text-testing-orange font-bold transition-colors">Contacto</a>
+      </nav>
+
+      <!-- BOTÓN COTIZACIONES -->
+      <div class="hidden lg:block">
+        <a href="contacto.html" class="bg-testing-orange hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-lg inline-flex items-center gap-3 transition-colors shadow-sm">
+          <span>Cotizaciones</span>
+          <span class="w-5 h-5 rounded-full bg-white text-testing-orange text-xs flex items-center justify-center font-black">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- BOTÓN MÓVIL -->
+      <button id="menu-btn" class="lg:hidden text-slate-800 focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white text-slate-800 mt-3 p-4 rounded-xl border border-slate-200 shadow-lg space-y-3">
+      <a href="index.html" class="block font-semibold py-1 hover:text-testing-orange">Inicio</a>
+      <a href="nosotros.html" class="block font-semibold py-1 hover:text-testing-orange">Nosotros</a>
+      <a href="servicios.html" class="block font-semibold py-1 hover:text-testing-orange">Servicios</a>
+      <a href="proyectos.html" class="block font-semibold py-1 hover:text-testing-orange">Proyectos</a>
+      <a href="contacto.html" class="block font-bold py-1 text-testing-orange">Contacto</a>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-testing-orange text-white font-bold px-4 py-2.5 rounded-lg w-full justify-center mt-2">
+        <span>Cotizaciones</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO INTERNO: CABECERA NARANJA TOTAL       -->
+  <!-- ========================================== -->
+  <section class="relative w-full bg-[#e05d06] py-20 px-6 lg:px-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/1.jpeg" alt="Contacto Testing" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-[#e05d06]/85 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-[#e05d06]/55"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="inline-flex items-center gap-2 text-white/90 font-bold text-xs uppercase tracking-widest mb-4">
+        <a href="index.html" class="hover:text-slate-900 transition-colors">Inicio</a>
+        <span>/</span>
+        <span class="text-white">Contacto</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl drop-shadow-sm">
+        Canales de Contacto y Cotización
+      </h1>
+      <p class="text-white/95 text-lg sm:text-xl font-medium mt-4 max-w-2xl leading-relaxed">
+        Ponte en comunicación directa con nuestro personal de laboratorio para programar visitas en obra, muestreo técnico o cotizaciones formales.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN PRINCIPAL: FORMULARIO Y CONTACTO   -->
+  <!-- ========================================== -->
+  <section class="w-full py-20 px-6 lg:px-16 bg-[#f4f5f8]">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        
+        <!-- COLUMNA IZQUIERDA: TARJETA NARANJA CON DATOS TÉCNICOS -->
+        <div class="lg:col-span-5 bg-[#e05d06] text-white rounded-[2.5rem] p-8 sm:p-12 shadow-xl flex flex-col justify-between">
+          <div class="space-y-8">
+            
+            <div>
+              <span class="uppercase tracking-widest text-xs font-bold bg-white/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                ATENCIÓN DIRECTA
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight">
+                Información de Laboratorio
+              </h2>
+              <p class="text-white/90 text-sm sm:text-base mt-2 leading-relaxed">
+                Brindamos cobertura en todo el territorio nacional con base operativa en el departamento de Alta Verapaz.
+              </p>
+            </div>
+
+            <!-- LISTA DE CANALES -->
+            <div class="space-y-6 text-sm sm:text-base">
+              
+              <!-- DIRECCIÓN -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Ubicación de Sede</h4>
+                  <p class="text-white/90 text-sm leading-relaxed mt-0.5">
+                    3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz[cite: 30].
+                  </p>
+                </div>
+              </div>
+
+              <!-- TELÉFONOS -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Líneas Telefónicas</h4>
+                  <p class="text-white/90 text-sm leading-relaxed mt-0.5">
+                    Oficina: <a href="tel:79510545" class="underline hover:text-slate-900 transition-colors">+502 7951-0545</a>[cite: 30]<br>
+                    Móvil / WhatsApp: <a href="tel:55543303" class="underline hover:text-slate-900 transition-colors">+502 5554-3303</a>[cite: 34]
+                  </p>
+                </div>
+              </div>
+
+              <!-- CORREOS ELECTRÓNICOS -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Correos Institucionales</h4>
+                  <p class="text-white/90 text-sm leading-relaxed mt-0.5">
+                    <a href="mailto:gruposanagustin09@gmail.com" class="underline hover:text-slate-900 transition-colors">gruposanagustin09@gmail.com</a>[cite: 30]<br>
+                    <a href="mailto:equipotesting22@gmail.com" class="underline hover:text-slate-900 transition-colors">equipotesting22@gmail.com</a>[cite: 34]
+                  </p>
+                </div>
+              </div>
+
+              <!-- HORARIOS -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Horario de Operación</h4>
+                  <p class="text-white/90 text-sm leading-relaxed mt-0.5">
+                    Lunes a Viernes: 7:00 AM – 5:00 PM<br>
+                    Sábados: 7:00 AM – 12:00 PM<br>
+                    <span class="text-xs text-white/80 font-medium">Disponibilidad en campo según programación de fundición u obra.</span>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- BOTÓN DIRECTO DE WHATSAPP -->
+          <div class="pt-8 border-t border-white/20 mt-8">
+            <a href="https://wa.me/50255543303" target="_blank" class="w-full bg-slate-900 hover:bg-slate-950 text-white font-bold py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-lg text-sm">
+              <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+              <span>Conversar por WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: FORMULARIO BLANCO DE COTIZACIÓN -->
+        <div class="lg:col-span-7 bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest mb-3">
+              <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
+              </svg>
+              <span class="tracking-wider text-testing-orange font-bold">SOLICITUD FORMAL</span>
+            </div>
+            
+            <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">
+              Solicitar una Cotización
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mt-1 mb-8">
+              Completa los datos de tu empresa o proyecto. Cuando nos faciliten el servicio de correo activo, esta solicitud se enviará de forma automática.
+            </p>
+
+            <!-- FORMULARIO -->
+            <form id="quote-form" action="#" method="POST" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="nombre" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Nombre o Empresa *</label>
+                  <input type="text" id="nombre" name="nombre" required placeholder="Ej. Constructora San Agustín / Ing. Juan Pérez" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                </div>
+                <div>
+                  <label for="telefono" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Teléfono de Contacto *</label>
+                  <input type="tel" id="telefono" name="telefono" required placeholder="+502 0000-0000" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Correo Electrónico *</label>
+                  <input type="email" id="email" name="email" required placeholder="contacto@tuempresa.com" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                </div>
+                <div>
+                  <label for="ubicacion" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Ubicación del Proyecto *</label>
+                  <input type="text" id="ubicacion" name="ubicacion" required placeholder="Municipio / Departamento (ej. Cobán, A.V.)" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="tipo_ensayo" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Tipo de Ensayos / Especialidad Requerida</label>
+                <select id="tipo_ensayo" name="tipo_ensayo" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all font-medium">
+                  <option value="">Selecciona el área técnica...</option>
+                  <option value="mecanica_suelos">Mecánica de Suelos (Granulometría, Proctor, Límites, CBR)</option>
+                  <option value="concreto_fresco">Muestreo de Concreto Fresco (Asentamiento, Temperatura, Cilindros)</option>
+                  <option value="concreto_endurecido">Concreto Endurecido (Compresión de Cilindros, Flexión, Martillo Schmidt)</option>
+                  <option value="densidades_campo">Densidades de Campo in situ (Cono de Arena)</option>
+                  <option value="geotecnia_spt">Estudio Geotécnico / Pozos a Cielo Abierto / Ensayo SPT</option>
+                  <option value="bloques_agregados">Ensayos de Bloques de Concreto y Calidad de Agregados</option>
+                  <option value="paquete_integral">Paquete Integral de Laboratorio en Obra</option>
+                  <option value="otro">Otro ensayo especializado</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="mensaje" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Detalles del Proyecto o Especificaciones</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente el volumen de muestras, número de cilindros o necesidades técnicas de la obra..." class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus-ring-orange transition-all"></textarea>
+              </div>
+
+              <div>
+                <button type="submit" class="w-full sm:w-auto bg-testing-orange hover:bg-orange-700 text-white font-bold px-9 py-4 rounded-xl transition-all shadow-md text-sm inline-flex items-center justify-center gap-3">
+                  <span>Enviar Solicitud de Cotización</span>
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
+            <i class="fa-solid fa-shield-halved text-testing-orange text-base"></i>
+            <span>Tus datos serán tratados exclusivamente para la elaboración del presupuesto técnico.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- UBICACIÓN Y LOGÍSTICA GEOGRÁFICA           -->
+  <!-- ========================================== -->
+  <section class="w-full py-16 px-6 lg:px-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest">
+            <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
+            </svg>
+            <span class="tracking-wider">PUNTO DE REFERENCIA</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+            Laboratorio Central en Cobán
+          </h3>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Recepción de muestras de suelo, agregados, bloques y probetas de concreto directamente en nuestras instalaciones en la <strong>3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz</strong>[cite: 30], o bien coordinación para recolección en sitio.
+          </p>
+          <div class="pt-2">
+            <a href="https://maps.google.com/?q=Coban+Alta+Verapaz" target="_blank" class="inline-flex items-center gap-2 text-testing-orange hover:text-orange-800 font-bold text-sm transition-colors">
+              <span>Abrir en Google Maps</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- RECUADRO DE MAPA / UBICACIÓN -->
+        <div class="lg:col-span-7 h-[300px] sm:h-[360px] rounded-[2.5rem] overflow-hidden border border-slate-200 shadow-sm relative bg-slate-100">
+          <iframe 
+            title="Ubicación Testing Cobán"
+            class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15394.06213797669!2d-90.380962!3d15.470557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589c379bf8c12a7%3A0x6b77ecb0a519ebbc!2sCob%C3%A1n!5e0!3m2!1ses!2sgt!4v1710000000000!5m2!1ses!2sgt" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER / PIE DE PÁGINA (GLOBAL)            -->
+  <!-- ========================================== -->
+  <footer class="w-full bg-[#050505] text-white pt-20 pb-12 px-6 lg:px-16 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- GRID DE 4 COLUMNAS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
+        
+        <!-- COLUMNA 1: LOGO2.PNG, TÍTULO Y DESCRIPCIÓN -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="flex items-center">
+            <img src="assets/logo2.png" alt="Testing - Suelos, Concreto, Materiales" class="h-14 w-auto object-contain">
+          </div>
+          
+          <h3 class="text-white text-lg sm:text-xl font-bold leading-snug">
+            TESTING es un laboratorio especializado en ensayos de suelos, materiales y concreto.
+          </h3>
+          
+          <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+            Nuestro trabajo busca proporcionar resultados confiables que sirvan como respaldo técnico para la toma de decisiones en obra.
+          </p>
+        </div>
+
+        <!-- COLUMNA 2: ACCESOS (ENLACES RÁPIDOS) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+            Accesos
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li>
+              <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="nosotros.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Nosotros</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Servicios</span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Proyectos</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Cotizaciones</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA 3: SERVICIOS -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+            Servicios
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Granulometría</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Densidad de Campo</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Asentamiento del concreto</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Compactación Proctor</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Resistencia del concreto</span>
+              </a>
+            </li>
+            <li>
+              <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+                <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
+                <span>Abrasión de Núcleos</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLUMNA 4: CONTÁCTANOS Y REDES SOCIALES -->
+        <div class="lg:col-span-3 space-y-6">
+          <div class="space-y-4">
+            <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
+              Contáctanos
+            </h4>
+            <div class="space-y-2.5 text-sm text-slate-300">
+              <p class="flex items-center gap-3">
+                <span class="text-[#e05d06] text-base">✉</span>
+                <a href="mailto:gruposanagustin09@gmail.com" class="hover:text-white transition-colors">gruposanagustin09@gmail.com</a>[cite: 30]
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="text-[#e05d06] text-base">📞</span>
+                <a href="tel:79510545" class="hover:text-white transition-colors">+502 7951-0545</a>[cite: 30]
+              </p>
+              <p class="flex items-start gap-3 leading-relaxed">
+                <span class="text-[#e05d06] text-base mt-0.5">📍</span>
+                <span>3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz</span>[cite: 30]
+              </p>
+            </div>
+          </div>
+
+          <!-- REDES SOCIALES -->
+          <div class="space-y-3 pt-2">
+            <h5 class="text-white text-lg font-bold">
+              Redes Sociales
+            </h5>
+            <div class="flex items-center gap-3">
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-x-twitter text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-instagram text-base"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-[#e05d06] hover:bg-[#c75000] text-white flex items-center justify-center transition-transform hover:scale-110 shadow-md">
+                <i class="fa-brands fa-youtube text-base"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT INFERIOR -->
+      <div class="pt-8 text-center text-xs text-slate-500">
+        <p>© 2026 Testing - Suelos, Concreto, Materiales. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT MENÚ MÓVIL Y MANEJADOR DEL FORMULARIO -->
+  <script>
+    // Menú móvil
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Prevención de envío mientras configuras el servicio de correos
+    const form = document.getElementById('quote-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Gracias por contactar a TESTING. El formulario se encuentra en modo de demostración hasta vincular el servicio de mensajería del cliente.');
+      });
+    }
+  </script>
+</body>
+</html>
