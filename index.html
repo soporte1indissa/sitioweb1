@@ -513,29 +513,203 @@
   <!-- ========================================== -->
 
   <!-- ========================================== -->
-  <!-- SECCION 5 (ENSAYOS DESTACADOS)             -->
+  <!-- SECCION 5                                  -->
   <!-- ========================================== -->
-  <section class="w-full bg-white py-20 lg:py-28 px-6 lg:px-16 min-h-[50vh]">
+  <section class="w-full bg-[#f4f5f8] py-20 lg:py-28 px-6 lg:px-16">
     <div class="max-w-7xl mx-auto">
       
       <!-- ENCABEZADO DE SECCIÓN -->
-      <div class="text-center max-w-4xl mx-auto mb-14">
-        <div class="inline-flex items-center justify-center gap-2 text-slate-800 font-bold text-[11px] sm:text-xs uppercase tracking-widest mb-4">
-          <!-- Círculo exacto con punto central (bullseye) -->
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <div class="inline-flex items-center justify-center gap-2 text-slate-800 font-bold text-xs uppercase tracking-widest mb-4">
+          <!-- Círculo bullseye -->
           <svg class="w-4 h-4 text-slate-900 shrink-0" viewBox="0 0 20 20" fill="none">
             <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="2.5"/>
             <circle cx="10" cy="10" r="2.5" fill="currentColor"/>
           </svg>
           <span class="tracking-wider">ENSAYOS DESTACADOS</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-slate-800 leading-tight tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
           Evaluaciones técnicas para resultados confiables
         </h2>
       </div>
 
-      <!-- Espacio reservado para agregar el contenido de Ensayos Destacados -->
-      <div id="ensayos-destacados-container" class="w-full h-full min-h-[200px]">
-        <!-- Contenido (tarjetas o grid) irá aquí -->
+      <!-- CUADRO GRANDE BLANCO CONTENEDOR -->
+      <div class="bg-white rounded-[2.5rem] lg:rounded-[3rem] p-6 sm:p-10 lg:p-14 shadow-sm border border-slate-100">
+        
+        <!-- CUADRÍCULA DE 6 ENSAYOS (3 COLUMNAS X 2 FILAS) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- 1. GRANULOMETRÍA (FONDO BLANCO / TEXTO OSCURO) -->
+          <div class="rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] hover:bg-slate-50/80 transition-colors">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Fábrica / Planta Industrial -->
+              <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <path d="M12 48h40M16 48V28l12-6v6l12-6v26" />
+                <line x1="20" y1="20" x2="20" y2="15" />
+                <line x1="24" y1="20" x2="24" y2="15" />
+                <path d="M44 48V20h8v28" />
+                <line x1="48" y1="14" x2="48" y2="20" />
+                <line x1="20" y1="36" x2="24" y2="36" />
+                <line x1="28" y1="36" x2="32" y2="36" />
+                <line x1="20" y1="42" x2="24" y2="42" />
+                <line x1="28" y1="42" x2="32" y2="42" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-slate-800 fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Granulometría</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed font-normal">
+                Determinación de la distribucion de tamulos de particulas presentes en muestras de suelos y agregados.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. COMPACTACIÓN PROCTOR (FONDO NARANJA / TEXTO BLANCO) -->
+          <div class="bg-[#e05d06] rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] shadow-sm">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Multímetro / Equipo de Medición -->
+              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <rect x="18" y="14" width="28" height="38" rx="4" />
+                <rect x="23" y="19" width="18" height="9" rx="1" />
+                <circle cx="32" cy="38" r="6" />
+                <line x1="32" y1="38" x2="35" y2="35" />
+                <line x1="46" y1="28" x2="52" y2="28" />
+                <line x1="46" y1="34" x2="52" y2="34" />
+                <line x1="52" y1="22" x2="52" y2="40" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-white fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Compactación Proctor</h3>
+              <p class="text-white/95 text-[15px] leading-relaxed font-normal">
+                Evaluación de la relacion entre humedad y densidad para determinar las condiciones de compactación del suelo.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. DENSIDAD EN CAMPO (FONDO BLANCO / TEXTO OSCURO) -->
+          <div class="rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] hover:bg-slate-50/80 transition-colors">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Brazo Robótico / Automatización -->
+              <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <line x1="14" y1="48" x2="50" y2="48" />
+                <rect x="20" y="44" width="24" height="4" rx="1" />
+                <circle cx="26" cy="40" r="3" />
+                <line x1="26" y1="37" x2="33" y2="26" />
+                <circle cx="34" cy="24" r="3" />
+                <line x1="37" y1="24" x2="46" y2="24" />
+                <path d="M46 21v6l5-3z" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-slate-800 fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Densidad en campo</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed font-normal">
+                Verificación de la densidad y el grado de compactación alcanzado directamente en el suelo de obra.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. RESISTENCIA DEL CONCRETO (FONDO NARANJA / TEXTO BLANCO) -->
+          <div class="bg-[#e05d06] rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] shadow-sm">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Trípode / Poleas con Manómetro -->
+              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <line x1="12" y1="18" x2="52" y2="18" />
+                <line x1="18" y1="18" x2="18" y2="46" />
+                <line x1="46" y1="18" x2="46" y2="46" />
+                <circle cx="24" cy="24" r="4" />
+                <circle cx="40" cy="24" r="4" />
+                <line x1="24" y1="28" x2="24" y2="38" />
+                <line x1="40" y1="28" x2="40" y2="40" />
+                <circle cx="32" cy="34" r="5" />
+                <circle cx="32" cy="34" r="1.5" fill="#fff" />
+                <path d="M40 40 v2 a2 2 0 0 1 -2 2" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-white fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Resistencia del concreto</h3>
+              <p class="text-white/95 text-[15px] leading-relaxed font-normal">
+                Evaluacion de la resistencia a compresion de especimen de concreto para comprobar su desempeño.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. ASENTAMIENTO DEL CONCRETO (FONDO BLANCO / TEXTO OSCURO) -->
+          <div class="rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] hover:bg-slate-50/80 transition-colors">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Careta / Máscara de Protección -->
+              <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <rect x="22" y="14" width="20" height="6" rx="2" />
+                <path d="M18 20h28c0 0 2 16-3 24s-11 8-11 8-6 0-11-8-3-24-3-24z" />
+                <rect x="22" y="26" width="20" height="11" rx="2" />
+                <line x1="14" y1="26" x2="18" y2="26" />
+                <line x1="46" y1="26" x2="50" y2="26" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-slate-800 fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Asentamiento del concreto</h3>
+              <p class="text-slate-500 text-[15px] leading-relaxed font-normal">
+                Control de la consistencia y trabajabilidad del concreto fresco mediante el ensayo de asentamiento.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6. ABRASION DE LOS ANGELES (FONDO NARANJA / TEXTO BLANCO) -->
+          <div class="bg-[#e05d06] rounded-[2rem] p-8 flex flex-col justify-between min-h-[310px] shadow-sm">
+            <div class="flex items-start justify-between mb-8">
+              <!-- Ícono Grúa / Polipasto con Contenedor -->
+              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                <line x1="14" y1="16" x2="50" y2="16" />
+                <line x1="32" y1="16" x2="32" y2="22" />
+                <circle cx="32" cy="25" r="3" />
+                <path d="M32 28v2a2 2 0 0 1 -2 2" />
+                <line x1="32" y1="30" x2="19" y2="38" />
+                <line x1="32" y1="30" x2="45" y2="38" />
+                <rect x="17" y="38" width="30" height="14" rx="2" />
+                <line x1="23" y1="38" x2="23" y2="52" />
+                <line x1="29" y1="38" x2="29" y2="52" />
+                <line x1="35" y1="38" x2="35" y2="52" />
+                <line x1="41" y1="38" x2="41" y2="52" />
+              </svg>
+              <!-- Flecha diagonal -->
+              <svg class="w-6 h-6 stroke-white fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Abrasion de Los Angeles</h3>
+              <p class="text-white/95 text-[15px] leading-relaxed font-normal">
+                Evaluación de la resistencia al desgaste y degradación de los agregados utilizados en construcción.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
