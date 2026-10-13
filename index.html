@@ -163,97 +163,86 @@
         </h2>
       </div>
 
-      <!-- GRID DE TARJETAS VERTICALES -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7">
+      <!-- GRID DE TARJETAS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         
         <!-- TARJETA 1: MISIÓN (NARANJA) -->
-        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
-          <div>
-            <!-- ÍCONO 1: CASCO INDUSTRIAL CON LINTERNA Y GAFAS -->
-            <div class="mb-5">
-              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <!-- Casco -->
-                <path d="M16 32 C16 18, 48 18, 48 32" />
-                <path d="M32 18 V12" />
-                <path d="M23 21 L19 15" />
-                <path d="M41 21 L45 15" />
-                <circle cx="32" cy="25" r="3" />
-                <rect x="12" y="32" width="40" height="4" rx="2" />
-                <!-- Gafas de protección -->
-                <path d="M16 43 C16 39, 19 38, 24 38 H27 C29 38, 30 40, 30 42 V44 C30 47, 28 48, 25 48 H19 C16 48, 16 46, 16 43 Z" />
-                <path d="M48 43 C48 39, 45 38, 40 38 H37 C35 38, 34 40, 34 42 V44 C34 47, 36 48, 39 48 H45 C48 48, 48 46, 48 43 Z" />
-                <path d="M30 42 C31 44, 33 44, 34 42" />
-                <line x1="12" y1="43" x2="16" y2="43" />
-                <line x1="48" y1="43" x2="52" y2="43" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Misión</h3>
+        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 sm:p-10 flex flex-col justify-start shadow-sm">
+          <!-- ÍCONO 1: CASCO INDUSTRIAL Y GAFAS -->
+          <div class="mb-8">
+            <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+              <path d="M16 32 C16 18, 48 18, 48 32" />
+              <path d="M32 18 V12" />
+              <path d="M23 21 L19 15" />
+              <path d="M41 21 L45 15" />
+              <circle cx="32" cy="25" r="3" />
+              <rect x="12" y="32" width="40" height="4" rx="2" />
+              <path d="M16 43 C16 39, 19 38, 24 38 H27 C29 38, 30 40, 30 42 V44 C30 47, 28 48, 25 48 H19 C16 48, 16 46, 16 43 Z" />
+              <path d="M48 43 C48 39, 45 38, 40 38 H37 C35 38, 34 40, 34 42 V44 C34 47, 36 48, 39 48 H45 C48 48, 48 46, 48 43 Z" />
+              <path d="M30 42 C31 44, 33 44, 34 42" />
+              <line x1="12" y1="43" x2="16" y2="43" />
+              <line x1="48" y1="43" x2="52" y2="43" />
+            </svg>
           </div>
-          <p class="text-white/95 text-[14px] leading-relaxed font-normal">
+          <!-- TÍTULO -->
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">Misión</h3>
+          <!-- PÁRRAFO CON LETRA MÁS GRANDE Y JUNTO AL TÍTULO -->
+          <p class="text-white/95 text-base sm:text-[17px] leading-relaxed font-normal">
             Brindar servicios de laboratorio de calidad para proyectos de ingeniería y construcción, proporcionando parámetros de evaluacion confiables para nuestros clientes.
           </p>
         </div>
 
         <!-- TARJETA 2: VISIÓN (BLANCO CON BORDE) -->
-        <div class="bg-white border border-slate-300 rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
-          <div>
-            <!-- ÍCONO 2: MÁQUINA DE CORTE / PRENSA CNC -->
-            <div class="mb-5">
-              <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <!-- Marco / Guías superiores -->
-                <line x1="15" y1="14" x2="49" y2="14" />
-                <line x1="19" y1="14" x2="19" y2="40" />
-                <line x1="45" y1="14" x2="45" y2="40" />
-                <!-- Cabezal e inyector/boquilla -->
-                <rect x="27" y="17" width="10" height="7" rx="1" />
-                <polygon points="30,24 34,24 32,29" />
-                <!-- Pieza de trabajo mecanizada -->
-                <path d="M25 40 V35 H28 C29 37, 35 37, 36 35 H39 V40" />
-                <!-- Mesa base con botones -->
-                <rect x="13" y="40" width="38" height="8" rx="2" />
-                <circle cx="20" cy="44" r="1" fill="#e05d06" />
-                <line x1="24" y1="44" x2="28" y2="44" />
-                <!-- Soportes / Patas inferiores -->
-                <line x1="20" y1="48" x2="20" y2="52" />
-                <line x1="44" y1="48" x2="44" y2="52" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Visión</h3>
+        <div class="bg-white border border-slate-300 rounded-[2.2rem] p-8 sm:p-10 flex flex-col justify-start shadow-sm">
+          <!-- ÍCONO 2: MÁQUINA DE ENSAYO / CORTE -->
+          <div class="mb-8">
+            <svg class="w-14 h-14 stroke-[#e05d06] fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+              <line x1="15" y1="14" x2="49" y2="14" />
+              <line x1="19" y1="14" x2="19" y2="40" />
+              <line x1="45" y1="14" x2="45" y2="40" />
+              <rect x="27" y="17" width="10" height="7" rx="1" />
+              <polygon points="30,24 34,24 32,29" />
+              <path d="M25 40 V35 H28 C29 37, 35 37, 36 35 H39 V40" />
+              <rect x="13" y="40" width="38" height="8" rx="2" />
+              <circle cx="20" cy="44" r="1" fill="#e05d06" />
+              <line x1="24" y1="44" x2="28" y2="44" />
+              <line x1="20" y1="48" x2="20" y2="52" />
+              <line x1="44" y1="48" x2="44" y2="52" />
+            </svg>
           </div>
-          <p class="text-slate-600 text-[14px] leading-relaxed font-normal">
+          <!-- TÍTULO -->
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Visión</h3>
+          <!-- PÁRRAFO CON LETRA MÁS GRANDE Y JUNTO AL TÍTULO -->
+          <p class="text-slate-600 text-base sm:text-[17px] leading-relaxed font-normal">
             Consolidarnos como una empresa confiable que aporte valor a los proyectos de construcción, innovando constantemente para ofrecer servicios cada vez mas avanzados.
           </p>
         </div>
 
         <!-- TARJETA 3: NUESTRO COMPROMISO (NARANJA) -->
-        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 lg:p-9 flex flex-col justify-between shadow-sm min-h-[390px]">
-          <div>
-            <!-- ÍCONO 3: GRÚA / POLIPASTO LEVANTANDO CONTENEDOR -->
-            <div class="mb-5">
-              <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
-                <!-- Riel y cable -->
-                <line x1="14" y1="14" x2="50" y2="14" />
-                <line x1="32" y1="14" x2="32" y2="20" />
-                <circle cx="32" cy="23" r="3" />
-                <!-- Gancho y eslingas -->
-                <path d="M32 26 V28 C32 30, 30 30, 29 28" />
-                <line x1="32" y1="28" x2="19" y2="35" />
-                <line x1="32" y1="28" x2="45" y2="35" />
-                <!-- Contenedor acanalado -->
-                <line x1="17" y1="35" x2="47" y2="35" />
-                <rect x="17" y="37" width="30" height="15" rx="2" />
-                <!-- Ranuras verticales del contenedor -->
-                <line x1="21" y1="37" x2="21" y2="52" />
-                <line x1="25" y1="37" x2="25" y2="52" />
-                <line x1="29" y1="37" x2="29" y2="52" />
-                <line x1="33" y1="37" x2="33" y2="52" />
-                <line x1="37" y1="37" x2="37" y2="52" />
-                <line x1="41" y1="37" x2="41" y2="52" />
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Nuestro compromiso</h3>
+        <div class="bg-[#e05d06] rounded-[2.2rem] p-8 sm:p-10 flex flex-col justify-start shadow-sm">
+          <!-- ÍCONO 3: GRÚA / CARGA -->
+          <div class="mb-8">
+            <svg class="w-14 h-14 stroke-white fill-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+              <line x1="14" y1="14" x2="50" y2="14" />
+              <line x1="32" y1="14" x2="32" y2="20" />
+              <circle cx="32" cy="23" r="3" />
+              <path d="M32 26 V28 C32 30, 30 30, 29 28" />
+              <line x1="32" y1="28" x2="19" y2="35" />
+              <line x1="32" y1="28" x2="45" y2="35" />
+              <line x1="17" y1="35" x2="47" y2="35" />
+              <rect x="17" y="37" width="30" height="15" rx="2" />
+              <line x1="21" y1="37" x2="21" y2="52" />
+              <line x1="25" y1="37" x2="25" y2="52" />
+              <line x1="29" y1="37" x2="29" y2="52" />
+              <line x1="33" y1="37" x2="33" y2="52" />
+              <line x1="37" y1="37" x2="37" y2="52" />
+              <line x1="41" y1="37" x2="41" y2="52" />
+            </svg>
           </div>
-          <p class="text-white/95 text-[14px] leading-relaxed font-normal">
+          <!-- TÍTULO -->
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">Nuestro compromiso</h3>
+          <!-- PÁRRAFO CON LETRA MÁS GRANDE Y JUNTO AL TÍTULO -->
+          <p class="text-white/95 text-base sm:text-[17px] leading-relaxed font-normal">
             Trabajamos para brindar resultados confiables, respaldados por la calidad de nuestros servicios y la confianza de nuestros clientes, con disponibilidad de operaciones a nivel nacional.
           </p>
         </div>
