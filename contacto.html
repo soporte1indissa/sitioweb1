@@ -121,7 +121,7 @@
             <!-- LISTA DE CANALES -->
             <div class="space-y-6 text-sm sm:text-base">
               
-              <!-- DIRECCIÓN -->
+              <!-- DIRECCIÓN DE LA PATENTE -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
                   <i class="fa-solid fa-location-dot"></i>
@@ -129,40 +129,38 @@
                 <div>
                   <h4 class="font-bold text-white text-base">Ubicación de Sede</h4>
                   <p class="text-white/90 text-sm leading-relaxed mt-0.5">
-                    3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz.
+                    3ra. Avenida 8-52 Zona 11 Local B, Cobán, Alta Verapaz
                   </p>
                 </div>
               </div>
 
-              <!-- TELÉFONOS -->
+              <!-- WHATSAPP / TELÉFONO -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white text-base">Líneas Telefónicas</h4>
+                  <h4 class="font-bold text-white text-base">Línea Telefónica y WhatsApp</h4>
                   <p class="text-white/90 text-sm leading-relaxed mt-0.5">
-                    Oficina: <a href="tel:79510545" class="underline hover:text-slate-900 transition-colors">+502 7951-0545</a><br>
-                    Móvil / WhatsApp: <a href="tel:55543303" class="underline hover:text-slate-900 transition-colors">+502 5554-3303</a>
+                    Atención y cotizaciones: <a href="https://wa.me/50240479589" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 transition-colors">+502 4047 9589</a>
                   </p>
                 </div>
               </div>
 
-              <!-- CORREOS ELECTRÓNICOS -->
+              <!-- CORREO INSTITUCIONAL ÚNICO -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
                   <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white text-base">Correos Institucionales</h4>
+                  <h4 class="font-bold text-white text-base">Correo Institucional</h4>
                   <p class="text-white/90 text-sm leading-relaxed mt-0.5">
-                    <a href="mailto:gruposanagustin09@gmail.com" class="underline hover:text-slate-900 transition-colors">gruposanagustin09@gmail.com</a><br>
-                    <a href="mailto:equipotesting22@gmail.com" class="underline hover:text-slate-900 transition-colors">equipotesting22@gmail.com</a>
+                    <a href="mailto:info@laboratoriotestig.com" class="underline hover:text-slate-900 transition-colors">info@laboratoriotestig.com</a>
                   </p>
                 </div>
               </div>
 
-              <!-- HORARIOS -->
+              <!-- HORARIOS Y DISPONIBILIDAD -->
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center shrink-0 text-xl">
                   <i class="fa-solid fa-clock"></i>
@@ -172,7 +170,7 @@
                   <p class="text-white/90 text-sm leading-relaxed mt-0.5">
                     Lunes a Viernes: 7:00 AM – 5:00 PM<br>
                     Sábados: 7:00 AM – 12:00 PM<br>
-                    <span class="text-xs text-white/80 font-medium">Disponibilidad en campo según programación de fundición u obra.</span>
+                    <span class="text-xs text-white/80 font-medium">Disponibilidad en campo según programación.</span>
                   </p>
                 </div>
               </div>
@@ -183,7 +181,7 @@
 
           <!-- BOTÓN DIRECTO DE WHATSAPP -->
           <div class="pt-8 border-t border-white/20 mt-8">
-            <a href="https://wa.me/50255543303" target="_blank" class="w-full bg-slate-900 hover:bg-slate-950 text-white font-bold py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-lg text-sm">
+            <a href="https://wa.me/50240479589" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-slate-950 text-white font-bold py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-lg text-sm">
               <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
               <span>Conversar por WhatsApp</span>
             </a>
@@ -206,16 +204,16 @@
               Solicitar una Cotización
             </h2>
             <p class="text-slate-500 text-sm leading-relaxed mt-1 mb-8">
-              Completa los datos de tu empresa o proyecto para gestionar tu cotización formal.
+              Completa los datos de tu empresa o proyecto para enviar tu requerimiento técnico directamente a nuestro equipo.
             </p>
 
-            <!-- FORMULARIO -->
-            <form id="quote-form" action="#" method="POST" class="space-y-5">
+            <!-- FORMULARIO VINCULADO AL CORREO -->
+            <form id="quote-form" action="mailto:info@laboratoriotestig.com" method="POST" enctype="text/plain" class="space-y-5">
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label for="nombre" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Nombre o Empresa *</label>
-                  <input type="text" id="nombre" name="nombre" required placeholder="Ej. Constructora San Agustín / Ing. Juan Pérez" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                  <input type="text" id="nombre" name="nombre" required placeholder="Ej. Constructora / Ing. Residente" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
                 </div>
                 <div>
                   <label for="telefono" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Teléfono de Contacto *</label>
@@ -230,7 +228,7 @@
                 </div>
                 <div>
                   <label for="ubicacion" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Ubicación del Proyecto *</label>
-                  <input type="text" id="ubicacion" name="ubicacion" required placeholder="Municipio / Departamento (ej. Cobán, A.V.)" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
+                  <input type="text" id="ubicacion" name="ubicacion" required placeholder="Municipio / Departamento" class="w-full bg-[#f8f9fa] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus-ring-orange transition-all">
                 </div>
               </div>
 
@@ -256,7 +254,7 @@
 
               <div>
                 <button type="submit" class="w-full sm:w-auto bg-testing-orange hover:bg-orange-700 text-white font-bold px-9 py-4 rounded-xl transition-all shadow-md text-sm inline-flex items-center justify-center gap-3">
-                  <span>Enviar Solicitud de Cotización</span>
+                  <span>Enviar a info@laboratoriotestig.com</span>
                   <i class="fa-solid fa-paper-plane text-xs"></i>
                 </button>
               </div>
@@ -266,7 +264,7 @@
 
           <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
             <i class="fa-solid fa-shield-halved text-testing-orange text-base"></i>
-            <span>Tus datos serán tratados exclusivamente para la elaboración del presupuesto técnico.</span>
+            <span>Tus datos serán tratados exclusivamente para la elaboración de la propuesta técnica.</span>
           </div>
 
         </div>
@@ -296,10 +294,10 @@
             Laboratorio Central en Cobán
           </h3>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Recepción de muestras de suelo, agregados, bloques y probetas de concreto directamente en nuestras instalaciones en la <strong>3era. Avenida 7-25 Zona 11, Cobán, Alta Verapaz</strong>, o bien coordinación para recolección en sitio.
+            Recepción de muestras de suelo, agregados, bloques y probetas de concreto directamente en nuestras instalaciones en la <strong>3ra. Avenida 8-52 Zona 11 Local B, Cobán, Alta Verapaz</strong>, o bien coordinación técnica para muestreos directos en su proyecto.
           </p>
           <div class="pt-2">
-            <a href="https://maps.google.com/?q=Coban+Alta+Verapaz" target="_blank" class="inline-flex items-center gap-2 text-testing-orange hover:text-orange-800 font-bold text-sm transition-colors">
+            <a href="https://maps.google.com/?q=3ra.+Avenida+8-52+Zona+11+Local+B,+Coban,+Alta+Verapaz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-testing-orange hover:text-orange-800 font-bold text-sm transition-colors">
               <span>Abrir en Google Maps</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
@@ -324,12 +322,15 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- FOOTER / PIE DE PÁGINA (GLOBAL)            -->
+  <!-- CONTENEDOR MODULAR DE FOOTER               -->
   <!-- ========================================== -->
   <div id="footer-container"></div>
 
-  <!-- SCRIPT MENÚ MÓVIL Y MANEJADOR DEL FORMULARIO -->
+  <!-- ========================================== -->
+  <!-- SCRIPTS                                    -->
+  <!-- ========================================== -->
   <script>
+    // Menú móvil
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     if (btn && menu) {
@@ -338,24 +339,16 @@
       });
     }
 
-    const form = document.getElementById('quote-form');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Gracias por contactar a TESTING. El formulario se encuentra en modo de demostración hasta vincular el servicio de mensajería del cliente.');
-      });
-    }
+    // Carga asíncrona del footer compartido
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Error al cargar footer.html');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.error(err));
   </script>
-  <script>
-  fetch('footer.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Error al cargar footer.html');
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(err => console.error(err));
-</script>
 </body>
 </html>
