@@ -624,68 +624,143 @@
   <!-- FIN SECCION 3                              -->
   <!-- ========================================== -->
 
- <!-- ========================================== -->
-<!-- SECCION 4: EMPRESAS ALIADAS / CLIENTES     -->
 <!-- ========================================== -->
-<section class="w-full bg-[#e05d06] py-14 lg:py-16 px-6 lg:px-16 text-white">
-  <div class="max-w-7xl mx-auto text-center space-y-10">
+<!-- SECCION 4: CARRUSEL INFINITO DE LOGOS      -->
+<!-- ========================================== -->
+<section class="w-full bg-[#e05d06] py-14 lg:py-16 overflow-hidden text-white">
+  <div class="max-w-7xl mx-auto px-6 text-center space-y-10">
     
-    <!-- TÍTULO EN ESPAÑOL SEGÚN LA MUESTRA -->
+    <!-- TÍTULO -->
     <h3 class="text-white text-base sm:text-lg font-bold tracking-normal drop-shadow-xs">
       Respaldo técnico para empresas e instituciones líderes en la construcción
     </h3>
 
-    <!-- CONTENEDOR DE LOS 5 LOGOS (CALIBRADOS POR TAMAÑO Y ALINEADOS AL CENTRO) -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12 items-center justify-items-center">
+    <!-- CONTENEDOR CON MÁSCARA Y ANIMACIÓN -->
+    <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       
-      <!-- L1: GRUPO ITSA -->
-      <div class="h-16 flex items-center justify-center w-full px-2">
-        <img 
-          src="assets/L1.png" 
-          alt="Grupo ITSA" 
-          class="max-h-12 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-        >
-      </div>
+      <!-- PISTA DE DESPLAZAMIENTO (2 BLOQUES IDÉNTICOS PARA CICLO INFINITO) -->
+      <div class="flex items-center w-max logo-marquee hover:[animation-play-state:paused]">
+        
+        <!-- SET 1 DE LOGOS (1 AL 5) -->
+        <div class="flex items-center shrink-0">
+          
+          <!-- L1: GRUPO ITSA -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L1.png" 
+              alt="Grupo ITSA" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
 
-      <!-- L2: SSAI INGENIEROS -->
-      <div class="h-16 flex items-center justify-center w-full px-2">
-        <img 
-          src="assets/L2.png" 
-          alt="SSAI Ingenieros" 
-          class="max-h-9 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-        >
-      </div>
+          <!-- L2: SSAI INGENIEROS (ESCALA AUMENTADA) -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L2.png" 
+              alt="SSAI Ingenieros" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
 
-      <!-- L3: BM 101 -->
-      <div class="h-16 flex items-center justify-center w-full px-2">
-        <img 
-          src="assets/L3.png" 
-          alt="bM 101" 
-          class="max-h-10 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-        >
-      </div>
+          <!-- L3: BM 101 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L3.png" 
+              alt="bM 101" 
+              class="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
 
-      <!-- L4: SEGEISA (MÁS ALTO PARA QUE EL TEXTO Y LA VÁLVULA SE LEAN NÍTIDOS) -->
-      <div class="h-16 flex items-center justify-center w-full px-2">
-        <img 
-          src="assets/L4.png" 
-          alt="SEGEISA" 
-          class="max-h-16 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-        >
-      </div>
+          <!-- L4: SEGEISA (ESCALA VERTICAL AUMENTADA) -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L4.png" 
+              alt="SEGEISA" 
+              class="h-22 sm:h-24 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
 
-      <!-- L5: WHITEY -->
-      <div class="h-16 flex items-center justify-center w-full px-2 col-span-2 sm:col-span-1">
-        <img 
-          src="assets/L5.png" 
-          alt="Whitey" 
-          class="max-h-8 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-        >
+          <!-- L5: WHITEY (ESCALA AUMENTADA) -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L5.png" 
+              alt="Whitey" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+        </div>
+
+        <!-- SET 2 DE LOGOS (RÉPLICA PARA CONTINUIDAD ININTERRUMPIDA) -->
+        <div class="flex items-center shrink-0" aria-hidden="true">
+          
+          <!-- L1 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L1.png" 
+              alt="Grupo ITSA" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+          <!-- L2 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L2.png" 
+              alt="SSAI Ingenieros" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+          <!-- L3 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L3.png" 
+              alt="bM 101" 
+              class="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+          <!-- L4 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L4.png" 
+              alt="SEGEISA" 
+              class="h-22 sm:h-24 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+          <!-- L5 -->
+          <div class="w-[280px] sm:w-[320px] h-28 flex items-center justify-center px-6">
+            <img 
+              src="assets/L5.png" 
+              alt="Whitey" 
+              class="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+            >
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
   </div>
+
+  <!-- ESTILOS DE LA ANIMACIÓN INFINITA -->
+  <style>
+    @keyframes marqueeSlider {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .logo-marquee {
+      animation: marqueeSlider 22s linear infinite;
+    }
+  </style>
 </section>
 <!-- ========================================== -->
 <!-- FIN SECCION 4                              -->
