@@ -119,19 +119,19 @@
         </div>
       </div>
 
-      <!-- GRID DE TARJETAS DE PROYECTO (6 CASOS) -->
+      <!-- GRID DE TARJETAS DE PROYECTO (CON ALTURA AMPLIADA EN FOTOS) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- PROYECTO 1: VIAL -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="viales">
           <div>
-            <div class="h-60 w-full overflow-hidden">
-              <img src="assets/16.jpeg" alt="Control de Terracerías y Pavimentos" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
+              <img src="assets/16.jpeg" alt="Control de calidad en carreteras" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
               <span class="inline-block bg-orange-100 text-testing-orange text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Infraestructura Vial</span>
               <h3 class="text-xl font-bold text-slate-900 mb-2 leading-snug">
-                Control de Calidad en Terracerías y Bases Viales
+                Control de calidad en carreteras
               </h3>
               <p class="text-slate-500 text-sm leading-relaxed mb-4">
                 Verificación sistemática de compactación en capas de sub-base y base granular para asegurar la vida útil de pavimentos frente al tránsito pesado.
@@ -147,7 +147,7 @@
         <!-- PROYECTO 2: CONCRETO -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
           <div>
-            <div class="h-60 w-full overflow-hidden">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
               <img src="assets/17.jpeg" alt="Vaciado y Resistencia de Concreto" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
@@ -169,7 +169,7 @@
         <!-- PROYECTO 3: GEOTECNIA -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="geotecnia">
           <div>
-            <div class="h-60 w-full overflow-hidden">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
               <img src="assets/18.jpeg" alt="Pozos a Cielo Abierto y Estratigrafía" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
@@ -191,7 +191,7 @@
         <!-- PROYECTO 4: GEOTECNIA -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="geotecnia">
           <div>
-            <div class="h-60 w-full overflow-hidden">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
               <img src="assets/19.jpeg" alt="Sondeos SPT en Obra" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
@@ -213,7 +213,7 @@
         <!-- PROYECTO 5: CONCRETO Y MAMPOSTERÍA -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
           <div>
-            <div class="h-60 w-full overflow-hidden">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
               <img src="assets/20.jpeg" alt="Ensayos de Bloques de Concreto" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
@@ -235,7 +235,7 @@
         <!-- PROYECTO 6: CONCRETO / VIAL -->
         <div class="project-card rounded-[2.2rem] bg-[#f8f9fa] border border-slate-200/80 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concreto">
           <div>
-            <div class="h-60 w-full overflow-hidden">
+            <div class="h-80 sm:h-[340px] w-full overflow-hidden">
               <img src="assets/21.jpeg" alt="Evaluación de Fluidez y Escurrimiento" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-7">
@@ -345,12 +345,12 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- FOOTER / PIE DE PÁGINA (GLOBAL)            -->
+  <!-- CONTENEDOR MODULAR DE FOOTER               -->
   <!-- ========================================== -->
   <div id="footer-container"></div>
 
   <!-- ========================================== -->
-  <!-- SCRIPTS: MENÚ MÓVIL Y FILTROS INTERACTIVOS -->
+  <!-- SCRIPTS: MENÚ MÓVIL, FILTROS Y FOOTER      -->
   <!-- ========================================== -->
   <script>
     // Menú móvil
@@ -368,7 +368,6 @@
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Estilos del botón activo
         filterButtons.forEach(b => {
           b.classList.remove('bg-slate-900', 'text-white');
           b.classList.add('bg-slate-100', 'text-slate-700');
@@ -387,17 +386,17 @@
         });
       });
     });
+
+    // Carga asíncrona del footer modular
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Error al cargar footer.html');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.error(err));
   </script>
-  <script>
-  fetch('footer.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Error al cargar footer.html');
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(err => console.error(err));
-</script>
 </body>
 </html>
