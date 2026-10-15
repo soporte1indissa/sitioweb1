@@ -97,7 +97,7 @@
   <!-- ========================================== -->
   <!-- SECCIÓN PRINCIPAL: FORMULARIO Y CONTACTO   -->
   <!-- ========================================== -->
-  <section class="w-full py-20 px-6 lg:px-16 bg-[#f4f5f8]">
+  <section class="w-full py-20 px-6 lg:px-16 bg-[#f4f5f8]" id="contacto">
     <div class="max-w-7xl mx-auto">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
@@ -156,7 +156,7 @@
                 <div>
                   <h4 class="font-bold text-white text-base">Correo Institucional</h4>
                   <p class="text-white/90 text-sm leading-relaxed mt-0.5">
-                    <a href="mailto:info@laboratoriotestig.com" class="underline hover:text-slate-900 transition-colors">info@laboratoriotestig.com</a>
+                    <a href="mailto:info@laboratoriotesting.com" class="underline hover:text-slate-900 transition-colors">info@laboratoriotesting.com</a>
                   </p>
                 </div>
               </div>
@@ -203,12 +203,27 @@
             <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">
               Solicitar una Cotización
             </h2>
-            <p class="text-slate-500 text-sm leading-relaxed mt-1 mb-8">
+            <p class="text-slate-500 text-sm leading-relaxed mt-1 mb-6">
               Completa los datos de tu empresa o proyecto para enviar tu requerimiento técnico directamente a nuestro equipo.
             </p>
 
-            <!-- FORMULARIO VINCULADO AL CORREO -->
-            <form id="quote-form" action="mailto:info@laboratoriotestig.com" method="POST" enctype="text/plain" class="space-y-5">
+            <!-- MENSAJES DE ALERTA DE ENVÍO -->
+            <div id="alert-success" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl text-sm flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-xl text-emerald-600"></i>
+              <div>
+                <strong>¡Mensaje enviado con éxito!</strong> Nos pondremos en contacto contigo a la brevedad.
+              </div>
+            </div>
+
+            <div id="alert-error" class="hidden mb-6 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-2xl text-sm flex items-center gap-3">
+              <i class="fa-solid fa-triangle-exclamation text-xl text-rose-600"></i>
+              <div>
+                <strong>Ocurrió un inconveniente.</strong> Por favor, verifica tus datos o comunícate vía WhatsApp.
+              </div>
+            </div>
+
+            <!-- FORMULARIO PROCESADO POR ENVIAR.PHP -->
+            <form id="quote-form" action="enviar.php" method="POST" class="space-y-5">
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
@@ -254,7 +269,7 @@
 
               <div>
                 <button type="submit" class="w-full sm:w-auto bg-testing-orange hover:bg-orange-700 text-white font-bold px-9 py-4 rounded-xl transition-all shadow-md text-sm inline-flex items-center justify-center gap-3">
-                  <span>Enviar a info@laboratoriotestig.com</span>
+                  <span>Enviar Cotización</span>
                   <i class="fa-solid fa-paper-plane text-xs"></i>
                 </button>
               </div>
@@ -294,7 +309,7 @@
             Laboratorio Central en Cobán
           </h3>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Recepción de muestras de suelo, agregados, bloques y probetas de concreto directamente en nuestras instalaciones en la <strong>3ra. Avenida 8-52 Zona 11 Local B, Cobán, Alta Verapaz</strong>[cite: 13], o bien coordinación técnica para muestreos directos en su proyecto.
+            Recepción de muestras de suelo, agregados, bloques y probetas de concreto directamente en nuestras instalaciones en la <strong>3ra. Avenida 8-52 Zona 11 Local B, Cobán, Alta Verapaz</strong>, o bien coordinación técnica para muestreos directos en su proyecto.
           </p>
           <div class="pt-2">
             <a href="https://maps.google.com/?q=3ra.+Avenida+8-52+Zona+11+Local+B,+Coban,+Alta+Verapaz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-testing-orange hover:text-orange-800 font-bold text-sm transition-colors">
@@ -349,6 +364,16 @@
         document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.error(err));
+
+    // Detección de parámetros de la URL para alertas
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    if (status === 'success') {
+      document.getElementById('alert-success').classList.remove('hidden');
+    } else if (status === 'error_datos' || status === 'error_envio') {
+      document.getElementById('alert-error').classList.remove('hidden');
+    }
   </script>
 </body>
 </html>
