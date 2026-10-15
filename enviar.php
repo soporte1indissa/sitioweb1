@@ -1,69 +1,73 @@
 <?php
 // Configuración de destino
 $email_destino = "info@laboratoriotesting.com";
-$asunto_correo = "Nuevo mensaje desde el sitio web Laboratorio Testing";
+$asunto_correo = "Solicitud de Cotización desde el sitio web - Testing";
 
-// Verificar que la petición sea vía POST
+// Verificar recepción vía POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Sanitización y limpieza de campos
-    $nombre   = isset($_POST['nombre']) ? filter_var(trim($_POST['nombre']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
-    $email    = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
-    $telefono = isset($_POST['telefono']) ? filter_var(trim($_POST['telefono']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : 'No especificado';
-    $mensaje  = isset($_POST['mensaje']) ? filter_var(trim($_POST['mensaje']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
+    // Sanitización de los datos recibidos
+    $nombre      = isset($_POST['nombre']) ? filter_var(trim($_POST['nombre']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
+    $telefono    = isset($_POST['telefono']) ? filter_var(trim($_POST['telefono']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
+    $email       = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
+    $ubicacion   = isset($_POST['ubicacion']) ? filter_var(trim($_POST['ubicacion']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : 'No especificada';
+    $tipo_ensayo = isset($_POST['tipo_ensayo']) ? filter_var(trim($_POST['tipo_ensayo']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : 'Sin seleccionar';
+    $mensaje     = isset($_POST['mensaje']) ? filter_var(trim($_POST['mensaje']), FILTER_SANITIZE_FULL_SPECIAL_CHARS) : 'Sin detalles adicionales';
 
     // Validar campos obligatorios
-    if (empty($nombre) || empty($email) || empty($mensaje) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: index.html?status=error_datos#contacto");
+    if (empty($nombre) || empty($email) || empty($telefono) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: contacto.html?status=error_datos#contacto");
         exit;
     }
 
-    // Construcción del cuerpo del correo en HTML
+    // Construcción del diseño del correo en HTML
     $cuerpo = "
     <html>
     <head>
         <title>$asunto_correo</title>
         <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; max-width: 600px; }
-            .header { background-color: #f4f4f4; padding: 10px 15px; border-radius: 5px; font-weight: bold; }
-            .field { margin-bottom: 10px; }
-            .label { font-weight: bold; color: #555; }
+            .container { padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; max-width: 600px; background-color: #ffffff; }
+            .header { background-color: #e05d06; color: #ffffff; padding: 15px; border-radius: 8px 8px 0 0; font-weight: bold; font-size: 18px; }
+            .content { padding: 15px; }
+            .field { margin-bottom: 12px; }
+            .label { font-weight: bold; color: #555; display: inline-block; width: 160px; }
         </style>
     </head>
     <body>
         <div class='container'>
-            <div class='header'>Detalles de la consulta recibida</div>
-            <br>
-            <div class='field'><span class='label'>Nombre:</span> $nombre</div>
-            <div class='field'><span class='label'>Correo electrónico:</span> $email</div>
-            <div class='field'><span class='label'>Teléfono:</span> $telefono</div>
-            <div class='field'><span class='label'>Mensaje:</span><br>" . nl2br($mensaje) . "</div>
+            <div class='header'>Nueva Solicitud de Cotización</div>
+            <div class='content'>
+                <div class='field'><span class='label'>Cliente / Empresa:</span> $nombre</div>
+                <div class='field'><span class='label'>Correo Electrónico:</span> $email</div>
+                <div class='field'><span class='label'>Teléfono:</span> $telefono</div>
+                <div class='field'><span class='label'>Ubicación Obra:</span> $ubicacion</div>
+                <div class='field'><span class='label'>Tipo de Ensayo:</span> $tipo_ensayo</div>
+                <hr style='border: 0; border-top: 1px solid #eee; margin: 15px 0;'>
+                <div class='field'><span class='label'>Detalles:</span><br>" . nl2br($mensaje) . "</div>
+            </div>
         </div>
     </body>
     </html>
     ";
 
-    // Encabezados obligatorios para Hostinger (evita la carpeta de Spam)
+    // Encabezados
     $headers  = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: Formulario Web <info@laboratoriotesting.com>" . "\r\n";
+    $headers .= "From: Web Testing <info@laboratoriotesting.com>" . "\r\n";
     $headers .= "Reply-To: $nombre <$email>" . "\r\n";
 
     // Envío del correo
     if (mail($email_destino, $asunto_correo, $cuerpo, $headers)) {
-        // Redirección con parámetro de éxito
-        header("Location: index.html?status=success#contacto");
+        header("Location: contacto.html?status=success#contacto");
         exit;
     } else {
-        // Redirección si falla el servidor de correo
-        header("Location: index.html?status=error_envio#contacto");
+        header("Location: contacto.html?status=error_envio#contacto");
         exit;
     }
 
 } else {
-    // Si intenta acceder directamente al script sin enviar formulario
-    header("Location: index.html");
+    header("Location: contacto.html");
     exit;
 }
 ?>
