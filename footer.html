@@ -4,7 +4,7 @@
     <!-- GRID DE 4 COLUMNAS -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
       
-      <!-- COLUMNA 1: LOGO (ESCALA CORREGIDA POR ANCHO), TÍTULO Y DESCRIPCIÓN -->
+      <!-- COLUMNA 1: LOGO, TÍTULO Y DESCRIPCIÓN -->
       <div class="lg:col-span-4 space-y-6">
         <div class="flex items-center">
           <img src="assets/logo2.png" alt="Testing - Suelos, Concreto, Materiales" class="w-52 sm:w-60 md:w-64 h-auto object-contain">
@@ -64,38 +64,38 @@
         </ul>
       </div>
 
-      <!-- COLUMNA 3: SERVICIOS -->
+      <!-- COLUMNA 3: SERVICIOS CON ANCLAS ESPECÍFICAS -->
       <div class="lg:col-span-3 space-y-4">
         <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
           Servicios
         </h4>
         <ul class="space-y-3 text-sm font-medium">
           <li>
-            <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+            <a href="servicios.html#suelos" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
               <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
               <span>Mecánica de Suelos</span>
             </a>
           </li>
           <li>
-            <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+            <a href="servicios.html#concreto" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
               <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
               <span>Concreto Endurecido y Mampostería</span>
             </a>
           </li>
           <li>
-            <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+            <a href="servicios.html#agregados" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
               <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
               <span>Agregados para Concreto</span>
             </a>
           </li>
-          li>
-            <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+          <li>
+            <a href="servicios.html#materiales" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
               <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
               <span>Materiales</span>
             </a>
           </li>
           <li>
-            <a href="servicios.html" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
+            <a href="servicios.html#control-obra" class="flex items-center gap-2 text-slate-300 hover:text-[#e05d06] transition-colors group">
               <span class="text-[#e05d06] font-bold group-hover:translate-x-1 transition-transform">›</span>
               <span>Control de Calidad en Obra</span>
             </a>
@@ -109,17 +109,28 @@
           <h4 class="text-white text-xl font-bold pb-3 border-b border-white/10">
             Contáctanos
           </h4>
-          <div class="space-y-2.5 text-sm text-slate-300">
+          <div class="space-y-3 text-sm text-slate-300">
+            <!-- CORREO -->
             <p class="flex items-center gap-3">
-              <span class="text-[#e05d06] text-base">✉</span>
+              <span class="w-5 text-center text-[#e05d06] text-base"><i class="fa-solid fa-envelope"></i></span>
               <a href="mailto:info@laboratoriotesting.com" class="hover:text-white transition-colors">info@laboratoriotesting.com</a>
             </p>
+            
+            <!-- TELÉFONO DE PLANTA -->
             <p class="flex items-center gap-3">
-              <span class="text-[#e05d06] text-base">📞</span>
-              <a href="https://wa.me/50240479589" target="_blank" class="hover:text-white transition-colors">+502 4047 9589</a>
+              <span class="w-5 text-center text-[#e05d06] text-base"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+50279510545" class="hover:text-white transition-colors">+502 7951-0545</a>
             </p>
+
+            <!-- CELULAR WHATSAPP -->
+            <p class="flex items-center gap-3">
+              <span class="w-5 text-center text-[#e05d06] text-base"><i class="fa-brands fa-whatsapp"></i></span>
+              <a href="https://wa.me/50240479589" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">+502 4047 9589</a>
+            </p>
+
+            <!-- DIRECCIÓN -->
             <p class="flex items-start gap-3 leading-relaxed">
-              <span class="text-[#e05d06] text-base mt-0.5">📍</span>
+              <span class="w-5 text-center text-[#e05d06] text-base mt-0.5"><i class="fa-solid fa-location-dot"></i></span>
               <span>3ra. Avenida 8-52 Zona 11 Local B, Cobán, Alta Verapaz</span>
             </p>
           </div>
